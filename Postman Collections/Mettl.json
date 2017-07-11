@@ -1,0 +1,986 @@
+{
+  "variables": [],
+  "info": {
+    "name": "Mettl",
+    "_postman_id": "7732fe53-4df8-f164-459d-ee7892eff07f",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "07989073-fbd0-e2d5-61a8-6bd8abd79cda",
+      "name": "account",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "3ec23546-4c40-4a96-2993-597ca18e18f3",
+          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithoutLanguageKey\"]=jsonData.status===\"SUCCESS\"",
+                  "",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "//var url=\"http://api.mettl.info/v1/account\";",
+                  "var url=postman.getEnvironmentVariable(\"url\")+\"/account\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{url}}/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
+              "auth": {},
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f71eb692-d5e7-cf80-cbcc-12246aad23eb",
+          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=english",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyEnglish\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var lc=\"english\";",
+                  "var url=\"http://api.mettl.info/v1/account\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+lc+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=english",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "languageCode",
+                  "value": "english",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "466decfa-38ec-7449-8042-ae892db29b15",
+          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=hindi",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyHindi\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var lc=\"hindi\";",
+                  "var url=\"http://api.mettl.info/v1/account\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+lc+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=hindi",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "languageCode",
+                  "value": "hindi",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f7088dfe-79f0-34ce-22de-ee6a03f9faa4",
+          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=arabic",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyArabic\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var lc=\"arabic\";",
+                  "var url=\"http://api.mettl.info/v1/account\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+lc+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=arabic",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "languageCode",
+                  "value": "arabic",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "e0877a03-5b2c-8eb7-bd1a-ce894e44bff1",
+          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=spanish",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeySpanish\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var lc=\"spanish\";",
+                  "var url=\"http://api.mettl.info/v1/account\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+lc+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=spanish",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "languageCode",
+                  "value": "spanish",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "73fb255b-6f8d-1ea3-e68b-2ce7be53ebeb",
+          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=portuguese",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyPortuguese\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var lc=\"portuguese\";",
+                  "var url=\"http://api.mettl.info/v1/account\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+lc+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=portuguese",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "languageCode",
+                  "value": "portuguese",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ed399e16-5ac6-fca7-88cf-1ac98397b058",
+          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=german",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyGerman\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var lc=\"german\";",
+                  "var url=\"http://api.mettl.info/v1/account\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+lc+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=german",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "languageCode",
+                  "value": "german",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "04b3ac74-2a5f-5d7b-ec56-ad3fd4575ed3",
+          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=random",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyRandom\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var lc=\"random\";",
+                  "var url=\"http://api.mettl.info/v1/account\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+lc+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=random",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "languageCode",
+                  "value": "random",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "6f4d4639-bccd-7b63-65a1-e6a345e43b39",
+      "name": "pbt",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "da5ad1cc-d4ca-3a41-fbd7-8a4f61f42d7f",
+          "name": "http://api.mettl.info/v1/pbts?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var url=\"http://api.mettl.info/v1/pbts\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/pbts?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "pbts"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c4d29bb6-6acf-c2a6-3409-986d8b293bc3",
+          "name": "http://api.mettl.info/v1/pbts/add?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&pbts=[1]",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var pbts=\"[1]\"",
+                  "var url=\"http://api.mettl.info/v1/pbts/add\";",
+                  "var method=\"POST\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+pbts+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/pbts/add?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&pbts=[1]",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "pbts",
+                "add"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "pbts",
+                  "value": "[1]",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "0cf4f5b5-a6e0-34c9-226d-0d22466d6283",
+      "name": "assessments",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "68748a7f-d711-97eb-be37-5f05380123bc",
+          "name": "http://api.mettl.info/v1/assessments?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&limit=5",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var limit=\"5\";",
+                  "var url=\"http://api.mettl.info/v1/assessments\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+limit+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/assessments?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&limit=5",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "assessments"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "limit",
+                  "value": "5",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "dbf40313-bfc1-dee0-6217-2d0cf92cbf40",
+          "name": "http://api.mettl.info/v1/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&limit=5",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
+                  "var limit=\"5\";",
+                  "var url=\"http://api.mettl.info/v1/schedules\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+limit+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.info/v1/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&limit=5",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "info"
+              ],
+              "path": [
+                "v1",
+                "schedules"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "limit",
+                  "value": "5",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
