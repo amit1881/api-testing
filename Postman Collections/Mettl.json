@@ -2306,7 +2306,74 @@
       "_postman_id": "ae9e6fcd-ff93-8f9f-6803-ff050300ff4c",
       "name": "wipro",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "6f4ae83c-3d8d-f82c-ca60-c73aeba80323",
+          "name": "{{wipro_url}}/schedules/{{schedule_key}}/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"07007fe3-e6f2-429b-9b8d-374ef4a6ea16\";",
+                  "var pk=\"c2c13dfb-f6bb-47ab-91db-84f36462c933\";",
+                  "//var url=\"http://api.mettl.info/v1/account\";",
+                  "var url=postman.getEnvironmentVariable(\"wipro_url\")+\"/schedules/\"+postman.getEnvironmentVariable(\"schedule_key\")+\"/candidates\";",
+                  "var method=\"GET\";",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{wipro_url}}/schedules/{{schedule_key}}/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
+              "auth": {},
+              "host": [
+                "{{wipro_url}}"
+              ],
+              "path": [
+                "schedules",
+                "{{schedule_key}}",
+                "candidates"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
