@@ -2583,7 +2583,6 @@
                   "var ts = Math.round((new Date()).getTime() / 1000);",
                   "var ak=\"07007fe3-e6f2-429b-9b8d-374ef4a6ea16\";",
                   "var pk=\"c2c13dfb-f6bb-47ab-91db-84f36462c933\";",
-                  "//var url=\"http://api.mettl.info/v1/account\";",
                   "var crfs='{\"Father\\'s name\":\"Ravi\",\"Training Centre ID\":\"Sector Council skill\",\"State\":\"Panjab\",\"First Name\":\"Colplay\",\"Date of Birth\":\"Mar 2 2000 \",\"Aadhar Number\":\"377977698361\",\"Candidate Image\":\"https://mettl.com/resourc/images/mettl_beta.png\",\"District\":\"Fazilka\",\"Email Address\":\"coldplay1500467614046@mettl.com\",\"Mother\\'s name:\"Rita\"}';",
                   "var url=postman.getEnvironmentVariable(\"biometric_online_url\")+\"/api-add-candidate\";",
                   "var method=\"POST\";",
