@@ -2641,6 +2641,79 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "91e5b2f5-d9a8-6587-f97a-4414659dde20",
+          "name": "{{certification_online_url}}/applicants/register?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&rd={{rd_prop}}",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);\r",
+                  "var ak=\"b66ab6f7-ff6d-4acd-9741-fcff9808c7f6\";\r",
+                  "var pk=\"5b1da5d2-b176-4013-924b-ef230764f101\";\r",
+                  "var rd = '{ registrationDetails : [ {Email Address:albert@yopmail.com, First Name : Albert, Last Name : Smith, Date of birth : Jan 29 1981, Country : United States}] ,sendEmail : true}';\r",
+                  "\r",
+                  "var url=postman.getEnvironmentVariable(\"certification_online_url\")+\"/applicants/register\";\r",
+                  "var method=\"POST\";\r",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+rd+\"\\n\"+ts;\r",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);\r",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);\r",
+                  "postman.setGlobalVariable(\"timestamp\", ts);\r",
+                  "postman.setGlobalVariable(\"apikey\", ak);\r",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);\r",
+                  "postman.setGlobalVariable(\"rd_prop\",rd);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{certification_online_url}}/applicants/register?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&rd={{rd_prop}}",
+              "auth": {},
+              "host": [
+                "{{certification_online_url}}"
+              ],
+              "path": [
+                "applicants",
+                "register"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "rd",
+                  "value": "{{rd_prop}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
         }
       ]
     }
