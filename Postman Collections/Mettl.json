@@ -2581,10 +2581,10 @@
                 "type": "text/javascript",
                 "exec": [
                   "var ts = Math.round((new Date()).getTime() / 1000);",
-                  "var ak=\"07007fe3-e6f2-429b-9b8d-374ef4a6ea16\";",
-                  "var pk=\"c2c13dfb-f6bb-47ab-91db-84f36462c933\";",
+                  "var ak=\"bd029d57-e200-46da-849b-d22650f640da\";",
+                  "var pk=\"0a6de0bd-b026-440c-95e4-9ff07b09ce47\";",
                   "var crfs='{\"Father\\'s name\":\"Ravi\",\"Training Centre ID\":\"Sector Council skill\",\"State\":\"Panjab\",\"First Name\":\"Colplay\",\"Date of Birth\":\"Mar 2 2000 \",\"Aadhar Number\":\"377977698361\",\"Candidate Image\":\"https://mettl.com/resourc/images/mettl_beta.png\",\"District\":\"Fazilka\",\"Email Address\":\"coldplay1500467614046@mettl.com\",\"Mother\\'s name:\"Rita\"}';",
-                  "var url=postman.getEnvironmentVariable(\"biometric_online_url\")+\"/api-add-candidate\";",
+                  "var url=postman.getEnvironmentVariable(\"biometric_staging_url\")+\"/api-add-candidate\";",
                   "var method=\"POST\";",
                   "var str=method+url+\"\\n\"+ak+\"\\n\"+crfs+\"\\n\"+ts;",
                   "var hash = CryptoJS.HmacSHA1(str, pk);",
