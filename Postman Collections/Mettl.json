@@ -2654,7 +2654,7 @@
                   "var ts = Math.round((new Date()).getTime() / 1000);\r",
                   "var ak=\"b66ab6f7-ff6d-4acd-9741-fcff9808c7f6\";\r",
                   "var pk=\"5b1da5d2-b176-4013-924b-ef230764f101\";\r",
-                  "var rd = '{ registrationDetails : [ {Email Address:albert@yopmail.com, First Name : Albert, Last Name : Smith, Date of birth : Jan 29 1981, Country : United States}] ,sendEmail : true}';\r",
+                  "var rd = '{ \"registrationDetails\" : [ {\"Email Address\":\"albert@yopmail.com\", \"First Name\" : \"Albert\"}] ,\"sendEmail\" : true}';\r",
                   "\r",
                   "var url=postman.getEnvironmentVariable(\"certification_online_url\")+\"/applicants/register\";\r",
                   "var method=\"POST\";\r",
