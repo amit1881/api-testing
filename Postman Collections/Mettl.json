@@ -2599,10 +2599,10 @@
           ],
           "request": {
             "url": {
-              "raw": "{{biometric_online_url}}/api-add-candidate?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&crfs={{crf_prop}}",
+              "raw": "{{biometric_staging_url}}/api-add-candidate?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&crfs={{crf_prop}}",
               "auth": {},
               "host": [
-                "{{biometric_online_url}}"
+                "{{biometric_staging_url}}"
               ],
               "path": [
                 "api-add-candidate"
