@@ -2801,7 +2801,29 @@
       "_postman_id": "fe1009bf-82d6-5826-894c-8dcb9b1adcaf",
       "name": "intellisense",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "b659701c-b4c9-87a2-c2de-5a9cd5c39b5a",
+          "name": "https://interview.mettl.de/intellisense-api/v1/intellisense/completions",
+          "request": {
+            "url": "https://interview.mettl.de/intellisense-api/v1/intellisense/completions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"source\":\"\",\"col\":0,\"line\":1,\"lang\":\"java\"}"
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
