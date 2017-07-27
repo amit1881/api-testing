@@ -2822,6 +2822,27 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "99363eb2-3409-7c52-04b7-b26b05e793c0",
+          "name": "https://interview.mettl.de/intellisense-api/v1/intellisense/completions",
+          "request": {
+            "url": "https://interview.mettl.de/intellisense-api/v1/intellisense/completions",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"source\":\"imp\",\"column\":2,\"line\":1,\"lang\":\"python\"}"
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     }
