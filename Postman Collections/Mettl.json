@@ -2866,6 +2866,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "cc74e382-9f2e-efbb-650f-ca8749bb814b",
+      "name": "candidate",
+      "description": "",
+      "item": []
     }
   ]
 }
