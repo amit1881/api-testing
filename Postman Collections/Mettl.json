@@ -2299,6 +2299,83 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "12ba1cf4-a3d2-2583-a55c-4d6ea3a4293e",
+          "name": "{{url}}/assessments/{{assessment-id}}/settings/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&as={{assessment_prop}}",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);\r",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";\r",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";\r",
+                  "//var url=\"http://api.mettl.info/v1/account\";\r",
+                  "var as ='{\"assessmentId\" : 111908, \"allowCopyPaste\" : false , \"exitRedirectionURL\" : null ,\"instructions\" : \"hello\" , \"onScreenCalculator\": true , \"showReportToCandidate\" : true}';\r",
+                  "var url=postman.getEnvironmentVariable(\"url\")+\"/assessments/\"+postman.getEnvironmentVariable(\"assessment-id\")+\"/settings/edit\";\r",
+                  "//var url=\"http://api.mettl.info/v1/assessments/111908/settings/edit\";\r",
+                  "var method=\"POST\";\r",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+as+\"\\n\"+ts;\r",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);\r",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);\r",
+                  "postman.setGlobalVariable(\"timestamp\", ts);\r",
+                  "postman.setGlobalVariable(\"apikey\", ak);\r",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);\r",
+                  "postman.setGlobalVariable(\"assessment_prop\",as);\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{url}}/assessments/{{assessment-id}}/settings/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&as={{assessment_prop}}",
+              "auth": {},
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "assessments",
+                "{{assessment-id}}",
+                "settings",
+                "edit"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "as",
+                  "value": "{{assessment_prop}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
