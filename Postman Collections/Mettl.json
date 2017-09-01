@@ -3094,6 +3094,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "2c83250e-d845-490b-8651-47f154caae50",
+      "name": "result",
+      "description": "",
+      "item": []
     }
   ]
 }
