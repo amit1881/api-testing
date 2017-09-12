@@ -3584,6 +3584,67 @@
       "description": "",
       "item": [
         {
+          "_postman_id": "5be60bc7-0414-8aab-c358-325d3e59c323",
+          "name": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}} copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);\r",
+                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";\r",
+                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";\r",
+                  "var sc ='{\"access\": { \"type\": \"ByInvitation\",\"candidates\":{\"add\": [{\"name\":\"\",\"email\":\"\"}]}, \"sendEmail\": true},\"sourceApp\": \"postmanclient\"}';\r",
+                  "\r",
+                  "// var sc={};\r",
+                  "// var wp={};\r",
+                  "// var vp={};\r",
+                  "// var op={};\r",
+                  "// var ac={};\r",
+                  "// sc.assessmentId=111908;\r",
+                  "// //sc.name='';\r",
+                  "// sc.scheduleType=\"AlwaysOn\";\r",
+                  "// sc.scheduleWindow=null;\r",
+                  "// wp.enabled=false;\r",
+                  "// sc.webProctoring=wp;\r",
+                  "// sc.imageProctoring=true;\r",
+                  "// sc.isCandidateAuthProctored=true;\r",
+                  "// op.candidateScreenCapture=true;\r",
+                  "// op.candidateAuthorization=false;\r",
+                  "// vp.mode=\"OFF\";\r",
+                  "// vp.options=op;\r",
+                  "// sc.visualProctoring=vp;\r",
+                  "// ac.type=\"OpenForAll\";\r",
+                  "// ac.candidates=null;\r",
+                  "// ac.sendEmail=false;\r",
+                  "// sc.access=ac;\r",
+                  "// sc.sourceApp=\"postmanclient\";\r",
+                  "// sc=JSON.stringify(sc);\r",
+                  "var url=postman.getEnvironmentVariable(\"url\")+\"/schedules/\"+postman.getEnvironmentVariable(\"access-key\")+\"/edit\";\r",
+                  "var method=\"POST\";\r",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+sc+\"\\n\"+ts;\r",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);\r",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);\r",
+                  "postman.setGlobalVariable(\"timestamp\", ts);\r",
+                  "postman.setGlobalVariable(\"apikey\", ak);\r",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);\r",
+                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
+            "method": "POST",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
           "_postman_id": "d0951e08-db6b-7dd4-518c-885c6c0fbeee",
           "name": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
           "event": [
@@ -3675,67 +3736,6 @@
               ],
               "variable": []
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "5be60bc7-0414-8aab-c358-325d3e59c323",
-          "name": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}} copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var ts = Math.round((new Date()).getTime() / 1000);\r",
-                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";\r",
-                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";\r",
-                  "var sc ='{\"access\": { \"type\": \"ByInvitation\",\"candidates\":{\"add\": [{\"name\":\"\",\"email\":\"\"}]}, \"sendEmail\": true},\"sourceApp\": \"postmanclient\"}';\r",
-                  "\r",
-                  "// var sc={};\r",
-                  "// var wp={};\r",
-                  "// var vp={};\r",
-                  "// var op={};\r",
-                  "// var ac={};\r",
-                  "// sc.assessmentId=111908;\r",
-                  "// //sc.name='';\r",
-                  "// sc.scheduleType=\"AlwaysOn\";\r",
-                  "// sc.scheduleWindow=null;\r",
-                  "// wp.enabled=false;\r",
-                  "// sc.webProctoring=wp;\r",
-                  "// sc.imageProctoring=true;\r",
-                  "// sc.isCandidateAuthProctored=true;\r",
-                  "// op.candidateScreenCapture=true;\r",
-                  "// op.candidateAuthorization=false;\r",
-                  "// vp.mode=\"OFF\";\r",
-                  "// vp.options=op;\r",
-                  "// sc.visualProctoring=vp;\r",
-                  "// ac.type=\"OpenForAll\";\r",
-                  "// ac.candidates=null;\r",
-                  "// ac.sendEmail=false;\r",
-                  "// sc.access=ac;\r",
-                  "// sc.sourceApp=\"postmanclient\";\r",
-                  "// sc=JSON.stringify(sc);\r",
-                  "var url=postman.getEnvironmentVariable(\"url\")+\"/schedules/\"+postman.getEnvironmentVariable(\"access-key\")+\"/edit\";\r",
-                  "var method=\"POST\";\r",
-                  "var str=method+url+\"\\n\"+ak+\"\\n\"+sc+\"\\n\"+ts;\r",
-                  "var hash = CryptoJS.HmacSHA1(str, pk);\r",
-                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);\r",
-                  "postman.setGlobalVariable(\"timestamp\", ts);\r",
-                  "postman.setGlobalVariable(\"apikey\", ak);\r",
-                  "postman.setGlobalVariable(\"signature\", hashInBase64);\r",
-                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
             "method": "POST",
             "header": [],
             "body": {},
