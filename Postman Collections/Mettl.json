@@ -3614,9 +3614,9 @@
                   "var method=\"POST\";\r",
                   "//postman.setGlobalVariable(\"timestamp\", Utils.generateTimeStamp());\r",
                   "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
-                  "postman.setGlobalVariable(\"apikey\", ak);\r",
+                  "//postman.setGlobalVariable(\"apikey\", ak);\r",
                   "//postman.setGlobalVariable(\"signature\", );\r",
-                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
+                  "//postman.setGlobalVariable(\"schedule_prop\",sc);\r",
                   "\r",
                   "\r",
                   ""
@@ -3626,7 +3626,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
+              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{sc}}",
               "auth": {},
               "host": [
                 "{{url}}"
@@ -3639,7 +3639,7 @@
               "query": [
                 {
                   "key": "ak",
-                  "value": "{{apikey}}",
+                  "value": "{{ak}}",
                   "equals": true,
                   "description": ""
                 },
@@ -3657,7 +3657,7 @@
                 },
                 {
                   "key": "sc",
-                  "value": "{{schedule_prop}}",
+                  "value": "{{sc}}",
                   "equals": true,
                   "description": ""
                 }
