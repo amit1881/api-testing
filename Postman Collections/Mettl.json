@@ -3592,7 +3592,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "window.Utils ={\r",
+                  "Utils ={\r",
                   "    generateTimeStamp: function(){\r",
                   "                        var ts = Math.round((new Date()).getTime() / 1000);\r",
                   "                        return ts;\r",
@@ -3636,6 +3636,7 @@
                   "var str=method+url+\"\\n\"+ak+\"\\n\"+sc+\"\\n\"+Utils.generateTimeStamp();\r",
                   "var hash = CryptoJS.HmacSHA1(str, pk);\r",
                   "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);\r",
+                  "postman.setGlobalVariable(\"timestamp\", Utils.generateTimeStamp());\r",
                   "postman.setGlobalVariable(\"apikey\", ak);\r",
                   "postman.setGlobalVariable(\"signature\", hashInBase64);\r",
                   "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
@@ -3646,7 +3647,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
+              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts=Utils.generateTimeStamp()&sc={{schedule_prop}}",
               "auth": {},
               "host": [
                 "{{url}}"
@@ -3671,7 +3672,7 @@
                 },
                 {
                   "key": "ts",
-                  "value": "{{timestamp}}",
+                  "value": "Utils.generateTimeStamp()",
                   "equals": true,
                   "description": ""
                 },
