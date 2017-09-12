@@ -3577,6 +3577,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "56f7b980-8152-daab-1f9b-50cb35c1a3eb",
+      "name": "schedule",
+      "description": "",
+      "item": []
     }
   ]
 }
