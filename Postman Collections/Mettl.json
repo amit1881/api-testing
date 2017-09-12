@@ -3592,7 +3592,12 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var ts = Math.round((new Date()).getTime() / 1000);\r",
+                  "function generateTimeStamp(){\r",
+                  "    var ts = Math.round((new Date()).getTime() / 1000);\r",
+                  "    return ts;\r",
+                  "}\r",
+                  "\r",
+                  "//var ts = Math.round((new Date()).getTime() / 1000);\r",
                   "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";\r",
                   "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";\r",
                   "var sc ='{\"access\": { \"type\": \"ByInvitation\",\"candidates\":{\"add\": [{\"name\":\"\",\"email\":\"\"}]}, \"sendEmail\": true},\"sourceApp\": \"postmanclient\"}';\r",
@@ -3626,7 +3631,10 @@
                   "var str=method+url+\"\\n\"+ak+\"\\n\"+sc+\"\\n\"+ts;\r",
                   "var hash = CryptoJS.HmacSHA1(str, pk);\r",
                   "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);\r",
-                  "postman.setGlobalVariable(\"timestamp\", ts);\r",
+                  "postman.setGlobalVariable(\"timestamp\", function generateTimeStamp(){\r",
+                  "    var ts = Math.round((new Date()).getTime() / 1000);\r",
+                  "    return ts;\r",
+                  "});\r",
                   "postman.setGlobalVariable(\"apikey\", ak);\r",
                   "postman.setGlobalVariable(\"signature\", hashInBase64);\r",
                   "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
@@ -3636,7 +3644,45 @@
             }
           ],
           "request": {
-            "url": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
+            "url": {
+              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
+              "auth": {},
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "schedules",
+                "{{access-key}}",
+                "edit"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "sc",
+                  "value": "{{schedule_prop}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
             "method": "POST",
             "header": [],
             "body": {},
