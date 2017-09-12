@@ -3648,7 +3648,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{Utils.generateTimeStamp()}}&sc={{schedule_prop}}",
+              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
               "auth": {},
               "host": [
                 "{{url}}"
@@ -3673,7 +3673,7 @@
                 },
                 {
                   "key": "ts",
-                  "value": "{{Utils.generateTimeStamp()}}",
+                  "value": "{{timestamp}}",
                   "equals": true,
                   "description": ""
                 },
