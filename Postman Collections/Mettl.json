@@ -1272,7 +1272,7 @@
                   "var op={};\r",
                   "var ac={};\r",
                   "sc.assessmentId=111908;\r",
-                  "sc.name=\"sc1\";\r",
+                  "//sc.name='';\r",
                   "sc.scheduleType=\"AlwaysOn\";\r",
                   "sc.scheduleWindow=null;\r",
                   "wp.enabled=false;\r",
