@@ -3625,7 +3625,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
+              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{$signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
               "auth": {},
               "host": [
                 "{{url}}"
@@ -3644,7 +3644,7 @@
                 },
                 {
                   "key": "asgn",
-                  "value": "{{signature}}",
+                  "value": "{{$signature}}",
                   "equals": true,
                   "description": ""
                 },
