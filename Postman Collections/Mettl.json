@@ -3614,7 +3614,7 @@
                   "var method=\"POST\";\r",
                   "//postman.setGlobalVariable(\"timestamp\", Utils.generateTimeStamp());\r",
                   "postman.setGlobalVariable(\"apikey\", ak);\r",
-                  "postman.setGlobalVariable(\"signature\", hashInBase64);\r",
+                  "postman.setGlobalVariable(\"signature\", Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp()));\r",
                   "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
                   "\r",
                   "\r",
