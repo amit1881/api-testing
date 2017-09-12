@@ -3595,7 +3595,6 @@
                   "var ts = Math.round((new Date()).getTime() / 1000);\r",
                   "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";\r",
                   "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";\r",
-                  "\r",
                   "var sc ='{\"access\": { \"type\": \"ByInvitation\",\"candidates\":{\"add\": [{\"name\":\"\",\"email\":\"\"}]}, \"sendEmail\": true},\"sourceApp\": \"postmanclient\"}';\r",
                   "\r",
                   "// var sc={};\r",
