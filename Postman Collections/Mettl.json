@@ -3631,7 +3631,7 @@
                   "// sc=JSON.stringify(sc);\r",
                   "var url=postman.getEnvironmentVariable(\"url\")+\"/schedules/\"+postman.getEnvironmentVariable(\"access-key\")+\"/edit\";\r",
                   "var method=\"POST\";\r",
-                  "var str=method+url+\"\\n\"+ak+\"\\n\"+sc+\"\\n\"+globals.timestamp;\r",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+sc+\"\\n\"+globals.eval(timestamp);\r",
                   "var hash = CryptoJS.HmacSHA1(str, pk);\r",
                   "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);\r",
                   "postman.setGlobalVariable(\"apikey\", ak);\r",
