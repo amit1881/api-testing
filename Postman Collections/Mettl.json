@@ -107,7 +107,7 @@
                   "var lc=\"english\";",
                   "var url=environment.url+\"/account\";",
                   "var method=\"GET\";",
-                  "",
+                  "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", hashInBase64);"
                 ]
               }
