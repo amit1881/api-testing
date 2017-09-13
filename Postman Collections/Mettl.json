@@ -3716,7 +3716,8 @@
                   "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);\r",
                   "//postman.setGlobalVariable(\"timestamp\", ts);\r",
                   "postman.setGlobalVariable(\"apikey\", ak);\r",
-                  "postman.setGlobalVariable(\"signature\", hashInBase64);\r",
+                  "//postman.setGlobalVariable(\"signature\", hashInBase64);\r",
+                  "globals.set(\"signature\", hashInBase64);\r",
                   "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
                   ""
                 ]
