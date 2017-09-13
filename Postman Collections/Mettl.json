@@ -105,13 +105,9 @@
                   "var ak=environment.ak;",
                   "var pk=environment.pk;",
                   "var lc=\"english\";",
-                  "var url=\"http://api.mettl.info/v1/account\";",
+                  "var url=environment.url+\"/account\";",
                   "var method=\"GET\";",
-                  "var str=method+url+\"\\n\"+ak+\"\\n\"+lc+\"\\n\"+ts;",
-                  "var hash = CryptoJS.HmacSHA1(str, pk);",
-                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
-                  "postman.setGlobalVariable(\"timestamp\", ts);",
-                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "",
                   "postman.setGlobalVariable(\"signature\", hashInBase64);"
                 ]
               }
@@ -119,7 +115,7 @@
           ],
           "request": {
             "url": {
-              "raw": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=english",
+              "raw": "http://api.mettl.info/v1/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=english",
               "protocol": "http",
               "auth": {},
               "host": [
@@ -134,7 +130,7 @@
               "query": [
                 {
                   "key": "ak",
-                  "value": "{{apikey}}",
+                  "value": "{{ak}}",
                   "equals": true,
                   "description": ""
                 },
@@ -146,7 +142,7 @@
                 },
                 {
                   "key": "ts",
-                  "value": "{{timestamp}}",
+                  "value": "{{$timestamp}}",
                   "equals": true,
                   "description": ""
                 },
