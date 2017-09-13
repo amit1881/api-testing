@@ -658,14 +658,14 @@
                   "var method=\"GET\";",
                   "var params=null;",
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
-                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                  "postman.setGlobalVariable(\"signature\", signature);"
                 ]
               }
             }
           ],
           "request": {
             "url": {
-              "raw": "http://api.mettl.info/v1/pbts?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
+              "raw": "http://api.mettl.info/v1/pbts?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
               "protocol": "http",
               "auth": {},
               "host": [
@@ -680,7 +680,7 @@
               "query": [
                 {
                   "key": "ak",
-                  "value": "{{apikey}}",
+                  "value": "{{ak}}",
                   "equals": true,
                   "description": ""
                 },
@@ -692,7 +692,7 @@
                 },
                 {
                   "key": "ts",
-                  "value": "{{timestamp}}",
+                  "value": "{{$timestamp}}",
                   "equals": true,
                   "description": ""
                 }
