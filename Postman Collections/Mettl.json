@@ -720,7 +720,7 @@
                   "var pbts=\"[622]\";",
                   "var url=environment.url+\"/pbts/add\";",
                   "var method=\"POST\";",
-                  "",
+                  "var signature=Utils.generateSignature(method,url,pbts,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", hashInBase64);"
                 ]
               }
