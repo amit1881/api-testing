@@ -3722,7 +3722,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
+              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
               "auth": {},
               "host": [
                 "{{url}}"
@@ -3735,7 +3735,7 @@
               "query": [
                 {
                   "key": "ak",
-                  "value": "{{apikey}}",
+                  "value": "{{ak}}",
                   "equals": true,
                   "description": ""
                 },
