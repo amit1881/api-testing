@@ -656,7 +656,8 @@
                   "var pk=environment.pk;",
                   "var url=environment.url+\"/pbts\";",
                   "var method=\"GET\";",
-                  "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
+                  "var params=null;",
+                  "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", hashInBase64);"
                 ]
               }
