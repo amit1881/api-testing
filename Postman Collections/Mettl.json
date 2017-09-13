@@ -3607,16 +3607,16 @@
                   "                    \r",
                   "    };\r",
                   "\r",
-                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";\r",
-                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";\r",
+                  "var ak=environment.ak;\r",
+                  "var pk=environment.pk;\r",
                   "var sc ='{\"access\": { \"type\": \"ByInvitation\",\"candidates\":{\"add\": [{\"name\":\"\",\"email\":\"\"}]}, \"sendEmail\": true},\"sourceApp\": \"postmanclient\"}';\r",
-                  "var url=postman.getEnvironmentVariable(\"url\")+\"/schedules/\"+postman.getEnvironmentVariable(\"access-key\")+\"/edit\";\r",
+                  "var url=environment.url+\"/schedules/\"+environment.access-key+\"/edit\";\r",
                   "var method=\"POST\";\r",
-                  "//postman.setGlobalVariable(\"timestamp\", Utils.generateTimeStamp());\r",
                   "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
+                  "//postman.setGlobalVariable(\"timestamp\", Utils.generateTimeStamp());\r",
                   "//postman.setGlobalVariable(\"apikey\", ak);\r",
-                  "//postman.setGlobalVariable(\"signature\", );\r",
-                  "//postman.setGlobalVariable(\"schedule_prop\",sc);\r",
+                  "postman.setGlobalVariable(\"signature\", signature);\r",
+                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
                   "\r",
                   "\r",
                   ""
@@ -3626,7 +3626,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{sc}}",
+              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
               "auth": {},
               "host": [
                 "{{url}}"
@@ -3657,7 +3657,7 @@
                 },
                 {
                   "key": "sc",
-                  "value": "{{sc}}",
+                  "value": "{{schedule_prop}}",
                   "equals": true,
                   "description": ""
                 }
