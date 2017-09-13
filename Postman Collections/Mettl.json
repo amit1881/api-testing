@@ -3683,8 +3683,6 @@
                 "type": "text/javascript",
                 "exec": [
                   "var sc ='{\"access\": { \"type\": \"ByInvitation\",\"candidates\":{\"add\": [{\"name\":\"amit\",\"email\":\"amit@yopmail.com\"}]}, \"sendEmail\": true},\"sourceApp\": \"postmanclient\"}';\r",
-                  "\r",
-                  "\r",
                   "var ak=environment.ak;\r",
                   "var pk=environment.pk;\r",
                   "var url=environment.url+\"/schedules/\"+environment.accesskey+\"/edit\";\r",
