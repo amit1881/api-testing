@@ -589,7 +589,7 @@
           ],
           "request": {
             "url": {
-              "raw": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=random",
+              "raw": "http://api.mettl.info/v1/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=random",
               "protocol": "http",
               "auth": {},
               "host": [
@@ -604,7 +604,7 @@
               "query": [
                 {
                   "key": "ak",
-                  "value": "{{apikey}}",
+                  "value": "{{ak}}",
                   "equals": true,
                   "description": ""
                 },
@@ -616,7 +616,7 @@
                 },
                 {
                   "key": "ts",
-                  "value": "{{timestamp}}",
+                  "value": "{{$timestamp}}",
                   "equals": true,
                   "description": ""
                 },
