@@ -22,7 +22,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithoutLanguageKey\"]=jsonData.status===\"SUCCESS\";",
+                  "tests.verifyResponseOfGetAccountApiWithoutLanguageKey=jsonData.status===\"SUCCESS\";",
                   "",
                   ""
                 ]
