@@ -3608,12 +3608,12 @@
                   "    };\r",
                   "\r",
                   "var ak=environment.ak;\r",
+                  "console.log(ak);\r",
                   "var pk=environment.pk;\r",
                   "var sc ='{\"access\": { \"type\": \"ByInvitation\",\"candidates\":{\"add\": [{\"name\":\"\",\"email\":\"\"}]}, \"sendEmail\": true},\"sourceApp\": \"postmanclient\"}';\r",
                   "var url=environment.url+\"/schedules/\"+environment.access-key+\"/edit\";\r",
                   "var method=\"POST\";\r",
                   "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
-                  "postman.setGlobalVariable(\"apikey\", ak);\r",
                   "postman.setGlobalVariable(\"signature\", signature);\r",
                   "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
                   "\r",
@@ -3629,7 +3629,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
+              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
               "auth": {},
               "host": [
                 "{{url}}"
@@ -3642,7 +3642,7 @@
               "query": [
                 {
                   "key": "ak",
-                  "value": "{{apikey}}",
+                  "value": "{{ak}}",
                   "equals": true,
                   "description": ""
                 },
