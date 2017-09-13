@@ -728,7 +728,7 @@
           ],
           "request": {
             "url": {
-              "raw": "http://api.mettl.info/v1/pbts/add?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&pbts=[28]",
+              "raw": "http://api.mettl.info/v1/pbts/add?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&pbts=[622]",
               "protocol": "http",
               "auth": {},
               "host": [
@@ -762,7 +762,7 @@
                 },
                 {
                   "key": "pbts",
-                  "value": "[28]",
+                  "value": "[622]",
                   "equals": true,
                   "description": ""
                 }
