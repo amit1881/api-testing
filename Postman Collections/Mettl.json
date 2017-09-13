@@ -654,7 +654,7 @@
                 "exec": [
                   "var ak=environment.ak;",
                   "var pk=environment.pk;",
-                  "var url=\"http://api.mettl.info/v1/pbts\";",
+                  "var url=environment.url+\"/pbts\";",
                   "var method=\"GET\";",
                   "var str=method+url+\"\\n\"+ak+\"\\n\"+ts;",
                   "var hash = CryptoJS.HmacSHA1(str, pk);",
