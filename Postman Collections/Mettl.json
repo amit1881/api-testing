@@ -3595,6 +3595,7 @@
                   "                    \r",
                   "    generateSignature: function(request_method,request_url,request_params,api_key,private_key,time_stamp){\r",
                   "                        var str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;\r",
+                  "                        console.log(str);\r",
                   "                        var hash = CryptoJS.HmacSHA1(str, private_key);\r",
                   "                        var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);\r",
                   "                        return hashInBase64;\r",
