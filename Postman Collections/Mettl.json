@@ -3614,13 +3614,7 @@
                   "var method=\"POST\";\r",
                   "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
                   "postman.setGlobalVariable(\"signature\", signature);\r",
-                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
-                  "\r",
-                  "\r",
-                  "\r",
-                  "\r",
-                  "\r",
-                  "\r",
+                  "postman.setGlobalVariable(\"schedule_prop\", sc);\r",
                   ""
                 ]
               }
