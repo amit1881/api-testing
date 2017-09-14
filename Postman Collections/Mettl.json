@@ -648,6 +648,16 @@
           "name": "http://api.mettl.info/v1/pbts?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
           "event": [
             {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponse\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
