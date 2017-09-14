@@ -107,9 +107,9 @@
                 "type": "text/javascript",
                 "exec": [
                   "var ts = Math.round((new Date()).getTime() / 1000);",
-                  "var ak=\"07007fe3-e6f2-429b-9b8d-374ef4a6ea16\";",
-                  "var pk=\"c2c13dfb-f6bb-47ab-91db-84f36462c933\";",
-                  "var url=\"http://api.mettl.com/v1/schedules/4ee51a97/candidates\";",
+                  "var ak=\"d3aeeeb4-3b33-4612-a1ec-89bd28dee5a4\";",
+                  "var pk=\"49d523ab-cb8b-4279-9762-7f85fe188658\";",
+                  "var url=\"http://api.mettl.com/v1/schedules/477d5acb/candidates\";",
                   "var method=\"GET\";",
                   "var ir='{\"recommendation\":true}';",
                   "var str=method+url+\"\\n\"+ak+\"\\n\"+ir+\"\\n\"+ts;",
@@ -125,7 +125,7 @@
           ],
           "request": {
             "url": {
-              "raw": "http://api.mettl.com/v1/schedules/4ee51a97/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
+              "raw": "http://api.mettl.com/v1/schedules/477d5acb/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
               "protocol": "http",
               "auth": {},
               "host": [
@@ -136,7 +136,7 @@
               "path": [
                 "v1",
                 "schedules",
-                "4ee51a97",
+                "477d5acb",
                 "candidates"
               ],
               "query": [
