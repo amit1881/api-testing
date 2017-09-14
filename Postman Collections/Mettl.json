@@ -1100,6 +1100,17 @@
           "name": "{{url}}/schedules/{{access-key}}?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
           "event": [
             {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnRetrievingDetailsOfASchedule\"]=jsonData.status===\"SUCCESS\"",
+                  "tests[\"verifyScheduleKey\"]=jsonData.schedule.accessKey===environment.accesskey"
+                ]
+              }
+            },
+            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
