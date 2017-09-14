@@ -726,7 +726,9 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyErrorIfPbtIsAlreadyAdded\"]=jsonData.status===\"ERROR\""
+                  "tests[\"verifyErrorIfPbtIsAlreadyAdded\"]=jsonData.status===\"ERROR\"",
+                  "tests[\"verifyBooleanValueIfPbtIsAlreadyAdded\"]=jsonData.pbts[0].added===false",
+                  "tests[\"verifyErrorMessageIfPbtIsAlreadyAdded\"]=jsonData.pbts[0].message===\"SQLException: pbt assessment already added\""
                 ]
               }
             },
