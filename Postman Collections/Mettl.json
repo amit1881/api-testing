@@ -1142,7 +1142,7 @@
                 "exec": [
                   "var ak=environment.ak;\r",
                   "var pk=environment.pk;\r",
-                  "var sc ='{\"assessmentId\": 111908,\"name\": \"Schedule for new Attempt\",\"scheduleType\": \"AlwaysOn\",\"scheduleWindow\": null,\"webProctoring\": { \"enabled\": false},\"access\": { \"type\": \"OpenForAll\",\"candidates\": null, \"sendEmail\": false},\"sourceApp\": \"postmanclient\"}';\r",
+                  "var sc ='{\"assessmentId\": 111908,\"name\": '+Math.random()+'',\"scheduleType\": \"AlwaysOn\",\"scheduleWindow\": null,\"webProctoring\": { \"enabled\": false},\"access\": { \"type\": \"OpenForAll\",\"candidates\": null, \"sendEmail\": false},\"sourceApp\": \"postmanclient\"}';\r",
                   "var url=environment.url+\"/assessments/\"+environment.assessmentid+\"/schedules\";\r",
                   "var method=\"POST\";\r",
                   "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
