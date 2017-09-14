@@ -1141,7 +1141,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnCreateSchedule\"]=jsonData.status===\"SUCCESS\""
+                  "tests[\"verifySuccessOnCreatingScheduleWithoutBrowsingTolerance\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             },
