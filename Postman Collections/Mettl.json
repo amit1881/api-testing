@@ -161,7 +161,7 @@
           ],
           "request": {
             "url": {
-              "raw": "http://api.mettl.xyz/v1/schedules/df0f3fa9/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
+              "raw": "http://api.mettl.xyz/v1/schedules/df0f3fa9/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
               "protocol": "http",
               "auth": {},
               "host": [
@@ -197,8 +197,9 @@
                 {
                   "key": "ir",
                   "value": "{{ir_options}}",
-                  "equals": true,
-                  "description": ""
+                  "type": "text",
+                  "description": "",
+                  "disabled": true
                 }
               ],
               "variable": []
