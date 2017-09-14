@@ -718,13 +718,10 @@
           ],
           "request": {
             "url": {
-              "raw": "http://api.mettl.info/v1/pbts/add?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&pbts=[622]",
-              "protocol": "http",
+              "raw": "{{url}}/v1/pbts/add?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&pbts=[622]",
               "auth": {},
               "host": [
-                "api",
-                "mettl",
-                "info"
+                "{{url}}"
               ],
               "path": [
                 "v1",
