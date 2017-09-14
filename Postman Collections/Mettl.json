@@ -1035,17 +1035,13 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
-                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
-                  "//var url=\"http://api.mettl.info/v1/account\";",
-                  "var url=postman.getEnvironmentVariable(\"url\")+\"/schedules\";",
+                  "var ak=environment.ak;",
+                  "var pk=environment.pk;",
+                  "var url=environment.url+\"/schedules\";",
                   "var method=\"GET\";",
-                  "var str=method+url+\"\\n\"+ak+\"\\n\"+ts;",
-                  "var hash = CryptoJS.HmacSHA1(str, pk);",
-                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
-                  "postman.setGlobalVariable(\"timestamp\", ts);",
-                  "postman.setGlobalVariable(\"apikey\", ak);",
-                  "postman.setGlobalVariable(\"signature\", hashInBase64);"
+                  "var params=null;",
+                  "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
+                  "postman.setGlobalVariable(\"signature\", signature);"
                 ]
               }
             }
