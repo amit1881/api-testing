@@ -1031,6 +1031,16 @@
           "name": "{{url}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
           "event": [
             {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnRetrievingSchedulesOfAnAccount\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
