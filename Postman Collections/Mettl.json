@@ -2783,14 +2783,14 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{access-key}}/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
+              "raw": "{{url}}/schedules/{{accesskey}}/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
               "auth": {},
               "host": [
                 "{{url}}"
               ],
               "path": [
                 "schedules",
-                "{{access-key}}",
+                "{{accesskey}}",
                 "edit"
               ],
               "query": [
