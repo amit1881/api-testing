@@ -1109,7 +1109,7 @@
                   "var url=environment.url+\"/schedules/\"+environment.accesskey;",
                   "var method=\"GET\";",
                   "var params=null;",
-                  "",
+                  "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", hashInBase64);"
                 ]
               }
