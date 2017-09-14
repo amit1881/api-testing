@@ -1241,7 +1241,7 @@
                   "var op={};\r",
                   "var ac={};\r",
                   "sc.assessmentId=111908;\r",
-                  "sc.name=Math.rancom();\r",
+                  "sc.name=Math.random();\r",
                   "sc.scheduleType=\"AlwaysOn\";\r",
                   "sc.scheduleWindow=null;\r",
                   "wp.enabled=false;\r",
