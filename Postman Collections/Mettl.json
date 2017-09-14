@@ -1220,10 +1220,8 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var ts = Math.round((new Date()).getTime() / 1000);\r",
-                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";\r",
-                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";\r",
-                  "//var url=\"http://api.mettl.info/v1/account\";\r",
+                  "var ak=environment.ak;\r",
+                  "var pk=environment.pk;\r",
                   "/*\r",
                   "var sc1 ='{\"assessmentId\": 111908,\"name\": \"Schedule10\",\"scheduleType\": \"AlwaysOn\",\"scheduleWindow\": null,\"webProctoring\": { \"enabled\": false},\"imageProctoring\": true,\"isCandidateAuthProctored\" : true,\"visualProctoring\": {\"mode\": \"OFF\",\"options\": {\"candidateScreenCapture\": true,\"candidateAuthorization\": false}},\"access\": { \"type\": \"OpenForAll\",\"candidates\": null, \"sendEmail\": false},\"sourceApp\": \"postmanclient\"}';\r",
                   "*/\r",
@@ -1233,7 +1231,7 @@
                   "var op={};\r",
                   "var ac={};\r",
                   "sc.assessmentId=111908;\r",
-                  "//sc.name='';\r",
+                  "sc.name=Math.rancom();\r",
                   "sc.scheduleType=\"AlwaysOn\";\r",
                   "sc.scheduleWindow=null;\r",
                   "wp.enabled=false;\r",
