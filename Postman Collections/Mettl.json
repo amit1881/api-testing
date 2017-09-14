@@ -565,16 +565,12 @@
           ],
           "request": {
             "url": {
-              "raw": "http://api.mettl.info/v1/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=random",
-              "protocol": "http",
+              "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=random",
               "auth": {},
               "host": [
-                "api",
-                "mettl",
-                "info"
+                "{{url}}"
               ],
               "path": [
-                "v1",
                 "account"
               ],
               "query": [
