@@ -711,6 +711,16 @@
           "name": "http://api.mettl.info/v1/pbts/add?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&pbts=[1]",
           "event": [
             {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyEnglish\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
