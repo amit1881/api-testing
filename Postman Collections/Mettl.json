@@ -1251,7 +1251,9 @@
                   "sc=JSON.stringify(sc);\r",
                   "var url=environment.url+\"/assessments/\"+environment.assessmentid+\"/schedules\";\r",
                   "var method=\"POST\";\r",
-                  "\r",
+                  "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
+                  "postman.setGlobalVariable(\"signature\", signature);\r",
+                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
                   ""
                 ]
               }
