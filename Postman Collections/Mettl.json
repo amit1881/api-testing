@@ -1104,11 +1104,9 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var ts = Math.round((new Date()).getTime() / 1000);",
-                  "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
-                  "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
-                  "//var url=\"http://api.mettl.info/v1/account\";",
-                  "var url=postman.getEnvironmentVariable(\"url\")+\"/schedules/\"+postman.getEnvironmentVariable(\"access-key\");",
+                  "var ak=environment.ak;",
+                  "var pk=environment.pk;",
+                  "var url=environment.url+\"/schedules/\"+postman.getEnvironmentVariable(\"access-key\");",
                   "var method=\"GET\";",
                   "var str=method+url+\"\\n\"+ak+\"\\n\"+ts;",
                   "var hash = CryptoJS.HmacSHA1(str, pk);",
