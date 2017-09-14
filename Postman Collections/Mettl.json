@@ -653,7 +653,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponse\"]=jsonData.status===\"SUCCESS\""
+                  "tests[\"verifySuccessOnRetrievingAllPbtsOfAnAccount\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             },
