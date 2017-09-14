@@ -134,7 +134,7 @@
         },
         {
           "_postman_id": "180dcdb0-acc7-cfe7-b0f7-3818d50b0c29",
-          "name": "http://api.mettl.com/v1/schedules/477d5acb/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
+          "name": "http://api.mettl.xyz/v1/schedules/477d5acb/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
           "event": [
             {
               "listen": "prerequest",
