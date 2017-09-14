@@ -912,16 +912,12 @@
           ],
           "request": {
             "url": {
-              "raw": "http://api.mettl.info/v1/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&limit=5",
-              "protocol": "http",
+              "raw": "{{url}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&limit=5",
               "auth": {},
               "host": [
-                "api",
-                "mettl",
-                "info"
+                "{{url}}"
               ],
               "path": [
-                "v1",
                 "schedules"
               ],
               "query": [
