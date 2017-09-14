@@ -1106,13 +1106,10 @@
                 "exec": [
                   "var ak=environment.ak;",
                   "var pk=environment.pk;",
-                  "var url=environment.url+\"/schedules/\"+postman.getEnvironmentVariable(\"access-key\");",
+                  "var url=environment.url+\"/schedules/\"+environment.accesskey;",
                   "var method=\"GET\";",
-                  "var str=method+url+\"\\n\"+ak+\"\\n\"+ts;",
-                  "var hash = CryptoJS.HmacSHA1(str, pk);",
-                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
-                  "postman.setGlobalVariable(\"timestamp\", ts);",
-                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "var params=null;",
+                  "",
                   "postman.setGlobalVariable(\"signature\", hashInBase64);"
                 ]
               }
@@ -1120,7 +1117,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{access-key}}?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
+              "raw": "{{url}}/schedules/{{access-key}}?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
               "auth": {},
               "host": [
                 "{{url}}"
@@ -1132,7 +1129,7 @@
               "query": [
                 {
                   "key": "ak",
-                  "value": "{{apikey}}",
+                  "value": "{{ak}}",
                   "equals": true,
                   "description": ""
                 },
@@ -1144,7 +1141,7 @@
                 },
                 {
                   "key": "ts",
-                  "value": "{{timestamp}}",
+                  "value": "{{$timestamp}}",
                   "equals": true,
                   "description": ""
                 }
