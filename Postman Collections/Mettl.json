@@ -810,6 +810,16 @@
           "name": "http://api.mettl.info/v1/assessments?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&limit=5",
           "event": [
             {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnRetrievingAssessmentsOfAnAccount\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
