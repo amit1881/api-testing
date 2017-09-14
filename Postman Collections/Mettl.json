@@ -726,7 +726,7 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyEnglish\"]=jsonData.status===\"SUCCESS\""
+                  "tests[\"verifyErrorIfPbtIsAlreadyAdded\"]=jsonData.status===\"ERROR\""
                 ]
               }
             },
