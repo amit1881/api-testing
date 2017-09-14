@@ -1117,14 +1117,14 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{access-key}}?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
+              "raw": "{{url}}/schedules/{{accesskey}}?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
               "auth": {},
               "host": [
                 "{{url}}"
               ],
               "path": [
                 "schedules",
-                "{{access-key}}"
+                "{{accesskey}}"
               ],
               "query": [
                 {
