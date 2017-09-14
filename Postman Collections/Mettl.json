@@ -154,7 +154,7 @@
                   "postman.setGlobalVariable(\"timestamp\", ts);",
                   "postman.setGlobalVariable(\"apikey\", ak);",
                   "postman.setGlobalVariable(\"signature\", hashInBase64);",
-                  "postman.setGlobalVariable(\"ir_options\",ir);"
+                  "//postman.setGlobalVariable(\"ir_options\",ir);"
                 ]
               }
             }
