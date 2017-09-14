@@ -2843,6 +2843,175 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "8b0759bd-3fa8-a375-54d5-c2648ca63d5e",
+      "name": "result",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "5be4119a-0abb-f0f4-1ae8-71c3fd0b6291",
+          "name": "http://api.mettl.com/v1/schedules/f03cbb34/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{qr_options}}&limit={{result_limit}}",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"6de115e7-acc4-459a-a8e7-03ae4a5a4cae\";",
+                  "var pk=\"faa769c3-444f-4e12-8420-4a7f738e23d4\";",
+                  "var url=\"http://api.mettl.com/v1/schedules/f03cbb34/candidates\";",
+                  "var method=\"GET\";",
+                  "var limit=\"5\";",
+                  "var ir='{\"recommendation\":true}';",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+ir+\"\\n\"+limit+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);",
+                  "postman.setGlobalVariable(\"ir_options\",ir);",
+                  "postman.setGlobalVariable(\"result_limit\",limit);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.com/v1/schedules/f03cbb34/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{qr_options}}&limit={{result_limit}}",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "schedules",
+                "f03cbb34",
+                "candidates"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ir",
+                  "value": "{{qr_options}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "limit",
+                  "value": "{{result_limit}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "180dcdb0-acc7-cfe7-b0f7-3818d50b0c29",
+          "name": "http://api.mettl.com/v1/schedules/4ee51a97/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"07007fe3-e6f2-429b-9b8d-374ef4a6ea16\";",
+                  "var pk=\"c2c13dfb-f6bb-47ab-91db-84f36462c933\";",
+                  "var url=\"http://api.mettl.com/v1/schedules/4ee51a97/candidates\";",
+                  "var method=\"GET\";",
+                  "var ir='{\"recommendation\":true}';",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+ir+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);",
+                  "postman.setGlobalVariable(\"ir_options\",ir);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.com/v1/schedules/4ee51a97/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "schedules",
+                "4ee51a97",
+                "candidates"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ir",
+                  "value": "{{ir_options}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
