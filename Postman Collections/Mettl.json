@@ -176,7 +176,7 @@
         },
         {
           "_postman_id": "b187bb7b-2d21-3ce1-918b-654edd2325e7",
-          "name": "http://api.mettl.xyz/v1/schedules/df0f3fa9/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}} copy",
+          "name": "http://api.mettl.com/v1/schedules/477d5acb/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}} copy",
           "event": [
             {
               "listen": "prerequest",
