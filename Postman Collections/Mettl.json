@@ -1216,6 +1216,16 @@
           "name": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
           "event": [
             {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnCreatingScheduleWithImageProctoringAndProctorAuthorizationOn\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            },
+            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
