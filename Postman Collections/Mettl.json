@@ -1267,20 +1267,20 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
+              "raw": "{{url}}/assessments/{{assessmentid}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
               "auth": {},
               "host": [
                 "{{url}}"
               ],
               "path": [
                 "assessments",
-                "{{assessment-id}}",
+                "{{assessmentid}}",
                 "schedules"
               ],
               "query": [
                 {
                   "key": "ak",
-                  "value": "{{apikey}}",
+                  "value": "{{ak}}",
                   "equals": true,
                   "description": ""
                 },
@@ -1292,7 +1292,7 @@
                 },
                 {
                   "key": "ts",
-                  "value": "{{timestamp}}",
+                  "value": "{{$timestamp}}",
                   "equals": true,
                   "description": ""
                 },
