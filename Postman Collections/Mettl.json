@@ -38,7 +38,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{accesskey}}/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}&limit={{result_limit}}",
+              "raw": "{{url}}/schedules/{{accesskey}}/candidates?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&ir={{ir_options}}&limit={{result_limit}}",
               "auth": {},
               "host": [
                 "{{url}}"
@@ -51,7 +51,7 @@
               "query": [
                 {
                   "key": "ak",
-                  "value": "{{apikey}}",
+                  "value": "{{ak}}",
                   "equals": true,
                   "description": ""
                 },
@@ -63,7 +63,7 @@
                 },
                 {
                   "key": "ts",
-                  "value": "{{timestamp}}",
+                  "value": "{{$timestamp}}",
                   "equals": true,
                   "description": ""
                 },
