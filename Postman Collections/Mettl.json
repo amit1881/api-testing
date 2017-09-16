@@ -1265,7 +1265,7 @@
                   "tests[\"verifySuccessOnCreatingScheduleWithImageProctoringAndProctorAuthorizationOn\"]=jsonData.status===\"SUCCESS\"",
                   "var xhr=new XMLHttpRequest();",
                   "var apiEndPoint=environment.url+\"/schedules/\"+jsonData.createdSchedule.accessKey;",
-                  "var queryString=\"?ak=\"+environment.ak+\"&asgn=\"+globals.signature+\"&ts=\"+Utils.Utils.generateTimeStamp();",
+                  "var queryString=\"?ak=\"+environment.ak+\"&asgn=\"+globals.signature+\"&ts=\"+Utils.generateTimeStamp();",
                   "var url=apiEndPoint+queryString;",
                   "console.log(apiEndPoint);",
                   "console.log(url);",
