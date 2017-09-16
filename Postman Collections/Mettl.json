@@ -1262,7 +1262,11 @@
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnCreatingScheduleWithImageProctoringAndProctorAuthorizationOn\"]=jsonData.status===\"SUCCESS\""
+                  "tests[\"verifySuccessOnCreatingScheduleWithImageProctoringAndProctorAuthorizationOn\"]=jsonData.status===\"SUCCESS\"",
+                  "var xhr=new XMLHttpRequest();",
+                  "var apiEndPoint=environment.url+\"/schedules/\"+jsonData.createdSchedule.accessKey;",
+                  "xhr.open(\"GET\",apiEndPoint,false);",
+                  "xhr.send();"
                 ]
               }
             },
