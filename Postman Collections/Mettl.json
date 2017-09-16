@@ -1362,13 +1362,7 @@
               "variable": []
             },
             "method": "POST",
-            "header": [
-              {
-                "key": "Access-Control-Allow-Origin",
-                "value": "*",
-                "description": ""
-              }
-            ],
+            "header": [],
             "body": {},
             "description": ""
           },
