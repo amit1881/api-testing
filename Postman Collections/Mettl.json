@@ -1278,7 +1278,7 @@
                   "*/",
                   "xhr.setRequestHeader( 'Origin', 'restapiclient');",
                   "xhr.send();",
-                  "console.log(JSON.stringify(data));",
+                  "console.log(data.responseText);",
                   "//console.log(xhr.schedule.imageProctoring);",
                   "//console.log(xhr.schedule.isCandidateAuthProctored);",
                   "//tests[\"verifySuccessOnCreatingScheduleWithImageProctoring\"]=xhr.status===\"Success\"",
