@@ -1273,8 +1273,13 @@
                   "console.log(apiEndPoint);",
                   "console.log(url);",
                   "xhr.open(\"GET\",url,async=true);",
+                  "/*",
+                  "No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.",
+                  "*/",
                   "xhr.setRequestHeader( 'Origin', 'restapiclient');",
-                  "xhr.send();"
+                  "xhr.send();",
+                  "tests[\"verifySuccessOnCreatingScheduleWithImageProctoring\"]=xhr.status===\"Success\"",
+                  "tests[\"verifyImageProctoringSwitch\"]=xhr.schedule.imageProctoring===true"
                 ]
               }
             },
