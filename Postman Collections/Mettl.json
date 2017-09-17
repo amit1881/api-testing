@@ -1279,7 +1279,8 @@
                   "xhr.setRequestHeader( 'Origin', 'restapiclient');",
                   "xhr.send();",
                   "tests[\"verifySuccessOnCreatingScheduleWithImageProctoring\"]=xhr.status===\"Success\"",
-                  "tests[\"verifyImageProctoringSwitch\"]=xhr.schedule.imageProctoring===true"
+                  "tests[\"verifyImageProctoringSwitch\"]=xhr.schedule.imageProctoring===true",
+                  "tests[\"verifyProctorAuthorizationSwitch\"]=xhr.schedule.isCandidateAuthProctored===true"
                 ]
               }
             },
