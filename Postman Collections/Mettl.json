@@ -1278,7 +1278,7 @@
                   "*/",
                   "xhr.setRequestHeader( 'Origin', 'restapiclient');",
                   "var responseText=xhr.send();",
-                  "var jsonResponse=JSON.parse(responseText);",
+                  "var jsonResponse=JSON.parse(this.responseText);",
                   "console.log(jsonResponse);",
                   "//console.log(xhr.schedule.imageProctoring);",
                   "//console.log(xhr.schedule.isCandidateAuthProctored);",
