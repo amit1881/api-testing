@@ -1643,6 +1643,171 @@
           "response": []
         },
         {
+          "_postman_id": "888f63ed-032d-ae28-6685-5a3c8a2a5cac",
+          "name": "{{url}}/assessments/{{assessmentid}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnCreatingScheduleWithImageProctoringAndProctorAuthorizationOn\"]=jsonData.status===\"SUCCESS\"",
+                  "// var xhr=new XMLHttpRequest();",
+                  "var apiEndPoint=environment.url+\"/schedules/\"+jsonData.createdSchedule.accessKey;",
+                  "var method=\"GET\";",
+                  "var params=null;",
+                  "var signature=Utils.generateSignature(method,apiEndPoint,params,environment.ak,environment.pk,Utils.generateTimeStamp());",
+                  "var queryString=\"?ak=\"+environment.ak+\"&asgn=\"+signature+\"&ts=\"+Utils.generateTimeStamp();",
+                  "var url=apiEndPoint+queryString;",
+                  "// console.log(apiEndPoint);",
+                  "// console.log(url);",
+                  "// xhr.onreadystatechange = function() {",
+                  "//     if (this.readyState == 4 && this.status == 200) {",
+                  "//         var jsonResponse = JSON.parse(this.responseText);",
+                  "//         console.log(jsonResponse);",
+                  "//     }",
+                  "// };",
+                  "// xhr.open(\"GET\",url,async=true);",
+                  "// /*",
+                  "// No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.",
+                  "// */",
+                  "// xhr.setRequestHeader( 'Origin', 'restapiclient');",
+                  "// xhr.send();",
+                  "// //console.log(xhr.schedule.imageProctoring);",
+                  "// //console.log(xhr.schedule.isCandidateAuthProctored);",
+                  "// //tests[\"verifySuccessOnCreatingScheduleWithImageProctoring\"]=xhr.status===\"Success\"",
+                  "// //tests[\"verifyImageProctoringSwitch\"]=xhr.schedule.imageProctoring===true",
+                  "// //tests[\"verifyProctorAuthorizationSwitch\"]=xhr.schedule.isCandidateAuthProctored===true",
+                  "",
+                  "",
+                  "// function getAjax(url, success) {",
+                  "//     var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');",
+                  "//     xhr.open('GET', url,true);",
+                  "//     xhr.onreadystatechange = function() {",
+                  "//         if (xhr.readyState==4 && xhr.status==200) success(xhr.responseText);",
+                  "//     };",
+                  "//     xhr.setRequestHeader( 'Origin', 'restapiclient');",
+                  "//     xhr.send();",
+                  "//     return xhr;",
+                  "// }",
+                  "",
+                  "// // example request",
+                  "// getAjax(url, function(data){ ",
+                  "//     var json = JSON.parse(data);",
+                  "//     console.log(json); ",
+                  "    ",
+                  "// });",
+                  "",
+                  "$.ajax({",
+                  "    type: 'GET',",
+                  "    url:   url,",
+                  "    headers: {",
+                  "            'Origin':'restapiclient'",
+                  "           },",
+                  "    success:function(data){",
+                  "                console.log(data);",
+                  "            },",
+                  "    error: function(XMLHttpRequest, textStatus, errorThrown) { ",
+                  "                console.log(\"Status: \" + textStatus); ",
+                  "            }        ",
+                  "});",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ak=environment.ak;\r",
+                  "var pk=environment.pk;\r",
+                  "/*\r",
+                  "var sc1 ='{\"assessmentId\": 111908,\"name\": \"Schedule10\",\"scheduleType\": \"AlwaysOn\",\"scheduleWindow\": null,\"webProctoring\": { \"enabled\": false},\"imageProctoring\": true,\"isCandidateAuthProctored\" : true,\"visualProctoring\": {\"mode\": \"OFF\",\"options\": {\"candidateScreenCapture\": true,\"candidateAuthorization\": false}},\"access\": { \"type\": \"OpenForAll\",\"candidates\": null, \"sendEmail\": false},\"sourceApp\": \"postmanclient\"}';\r",
+                  "*/\r",
+                  "var sc={};\r",
+                  "var wp={};\r",
+                  "var vp={};\r",
+                  "var op={};\r",
+                  "var ac={};\r",
+                  "sc.assessmentId=111908;\r",
+                  "sc.name=Math.random();\r",
+                  "sc.scheduleType=\"AlwaysOn\";\r",
+                  "sc.scheduleWindow=null;\r",
+                  "wp.enabled=false;\r",
+                  "sc.webProctoring=wp;\r",
+                  "sc.imageProctoring=true;\r",
+                  "sc.isCandidateAuthProctored=true;\r",
+                  "op.candidateScreenCapture=true;\r",
+                  "op.candidateAuthorization=false;\r",
+                  "vp.mode=\"OFF\";\r",
+                  "vp.options=op;\r",
+                  "sc.visualProctoring=vp;\r",
+                  "ac.type=\"OpenForAll\";\r",
+                  "ac.candidates=null;\r",
+                  "ac.sendEmail=false;\r",
+                  "sc.access=ac;\r",
+                  "sc.sourceApp=\"postmanclient\";\r",
+                  "sc=JSON.stringify(sc);\r",
+                  "var url=environment.url+\"/assessments/\"+environment.assessmentid+\"/schedules\";\r",
+                  "var method=\"POST\";\r",
+                  "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
+                  "postman.setGlobalVariable(\"signature\", signature);\r",
+                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{url}}/assessments/{{assessmentid}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
+              "auth": {},
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "assessments",
+                "{{assessmentid}}",
+                "schedules"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{ak}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{$timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "sc",
+                  "value": "{{schedule_prop}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
           "_postman_id": "d48f0fd1-aba3-97ae-4f0a-938545a0e1c0",
           "name": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
           "event": [
@@ -2738,171 +2903,6 @@
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "sc",
-                  "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
-                }
-              ],
-              "variable": []
-            },
-            "method": "POST",
-            "header": [],
-            "body": {},
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "888f63ed-032d-ae28-6685-5a3c8a2a5cac",
-          "name": "{{url}}/assessments/{{assessmentid}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnCreatingScheduleWithImageProctoringAndProctorAuthorizationOn\"]=jsonData.status===\"SUCCESS\"",
-                  "// var xhr=new XMLHttpRequest();",
-                  "var apiEndPoint=environment.url+\"/schedules/\"+jsonData.createdSchedule.accessKey;",
-                  "var method=\"GET\";",
-                  "var params=null;",
-                  "var signature=Utils.generateSignature(method,apiEndPoint,params,environment.ak,environment.pk,Utils.generateTimeStamp());",
-                  "var queryString=\"?ak=\"+environment.ak+\"&asgn=\"+signature+\"&ts=\"+Utils.generateTimeStamp();",
-                  "var url=apiEndPoint+queryString;",
-                  "// console.log(apiEndPoint);",
-                  "// console.log(url);",
-                  "// xhr.onreadystatechange = function() {",
-                  "//     if (this.readyState == 4 && this.status == 200) {",
-                  "//         var jsonResponse = JSON.parse(this.responseText);",
-                  "//         console.log(jsonResponse);",
-                  "//     }",
-                  "// };",
-                  "// xhr.open(\"GET\",url,async=true);",
-                  "// /*",
-                  "// No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.",
-                  "// */",
-                  "// xhr.setRequestHeader( 'Origin', 'restapiclient');",
-                  "// xhr.send();",
-                  "// //console.log(xhr.schedule.imageProctoring);",
-                  "// //console.log(xhr.schedule.isCandidateAuthProctored);",
-                  "// //tests[\"verifySuccessOnCreatingScheduleWithImageProctoring\"]=xhr.status===\"Success\"",
-                  "// //tests[\"verifyImageProctoringSwitch\"]=xhr.schedule.imageProctoring===true",
-                  "// //tests[\"verifyProctorAuthorizationSwitch\"]=xhr.schedule.isCandidateAuthProctored===true",
-                  "",
-                  "",
-                  "// function getAjax(url, success) {",
-                  "//     var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');",
-                  "//     xhr.open('GET', url,true);",
-                  "//     xhr.onreadystatechange = function() {",
-                  "//         if (xhr.readyState==4 && xhr.status==200) success(xhr.responseText);",
-                  "//     };",
-                  "//     xhr.setRequestHeader( 'Origin', 'restapiclient');",
-                  "//     xhr.send();",
-                  "//     return xhr;",
-                  "// }",
-                  "",
-                  "// // example request",
-                  "// getAjax(url, function(data){ ",
-                  "//     var json = JSON.parse(data);",
-                  "//     console.log(json); ",
-                  "    ",
-                  "// });",
-                  "",
-                  "$.ajax({",
-                  "    type: 'GET',",
-                  "    url:   url,",
-                  "    headers: {",
-                  "            'Origin':'restapiclient'",
-                  "           },",
-                  "    success:function(data){",
-                  "                console.log(data);",
-                  "            },",
-                  "    error: function(XMLHttpRequest, textStatus, errorThrown) { ",
-                  "                console.log(\"Status: \" + textStatus); ",
-                  "            }        ",
-                  "});",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var ak=environment.ak;\r",
-                  "var pk=environment.pk;\r",
-                  "/*\r",
-                  "var sc1 ='{\"assessmentId\": 111908,\"name\": \"Schedule10\",\"scheduleType\": \"AlwaysOn\",\"scheduleWindow\": null,\"webProctoring\": { \"enabled\": false},\"imageProctoring\": true,\"isCandidateAuthProctored\" : true,\"visualProctoring\": {\"mode\": \"OFF\",\"options\": {\"candidateScreenCapture\": true,\"candidateAuthorization\": false}},\"access\": { \"type\": \"OpenForAll\",\"candidates\": null, \"sendEmail\": false},\"sourceApp\": \"postmanclient\"}';\r",
-                  "*/\r",
-                  "var sc={};\r",
-                  "var wp={};\r",
-                  "var vp={};\r",
-                  "var op={};\r",
-                  "var ac={};\r",
-                  "sc.assessmentId=111908;\r",
-                  "sc.name=Math.random();\r",
-                  "sc.scheduleType=\"AlwaysOn\";\r",
-                  "sc.scheduleWindow=null;\r",
-                  "wp.enabled=false;\r",
-                  "sc.webProctoring=wp;\r",
-                  "sc.imageProctoring=true;\r",
-                  "sc.isCandidateAuthProctored=true;\r",
-                  "op.candidateScreenCapture=true;\r",
-                  "op.candidateAuthorization=false;\r",
-                  "vp.mode=\"OFF\";\r",
-                  "vp.options=op;\r",
-                  "sc.visualProctoring=vp;\r",
-                  "ac.type=\"OpenForAll\";\r",
-                  "ac.candidates=null;\r",
-                  "ac.sendEmail=false;\r",
-                  "sc.access=ac;\r",
-                  "sc.sourceApp=\"postmanclient\";\r",
-                  "sc=JSON.stringify(sc);\r",
-                  "var url=environment.url+\"/assessments/\"+environment.assessmentid+\"/schedules\";\r",
-                  "var method=\"POST\";\r",
-                  "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
-                  "postman.setGlobalVariable(\"signature\", signature);\r",
-                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "{{url}}/assessments/{{assessmentid}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
-              "host": [
-                "{{url}}"
-              ],
-              "path": [
-                "assessments",
-                "{{assessmentid}}",
-                "schedules"
-              ],
-              "query": [
-                {
-                  "key": "ak",
-                  "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "asgn",
-                  "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "ts",
-                  "value": "{{$timestamp}}",
                   "equals": true,
                   "description": ""
                 },
