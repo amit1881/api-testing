@@ -1316,11 +1316,10 @@
                   "            'Origin':'restapiclient'",
                   "           },",
                   "    success:function(response){",
-                  "                console.log(response);",
+                  "                console.log(response.data);",
                   "            },",
-                  "            error: function(XMLHttpRequest, textStatus, errorThrown) { ",
+                  "    error: function(XMLHttpRequest, textStatus, errorThrown) { ",
                   "                console.log(\"Status: \" + textStatus); ",
-                  "                console.log(\"Error: \" + errorThrown); ",
                   "            }        ",
                   "});",
                   ""
