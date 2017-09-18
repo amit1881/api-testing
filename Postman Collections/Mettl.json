@@ -1478,7 +1478,7 @@
                   "    type: 'GET',",
                   "    url:   url,",
                   "    headers: {",
-                  "            'Origin':'restapiclient'",
+                  "            'Origin':'https://mettl.com'",
                   "           },",
                   "    success:function(data){",
                   "                console.log(data);",
