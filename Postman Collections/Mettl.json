@@ -32,7 +32,8 @@
                   "postman.setGlobalVariable(\"signature\", signature);",
                   "postman.setGlobalVariable(\"ir_options\",ir);",
                   "postman.setGlobalVariable(\"result_limit\",limit);",
-                  "//access key-----476171c6"
+                  "//xyz---access key-----476171c6",
+                  "//prod--access key-----ffb76d59"
                 ]
               }
             }
