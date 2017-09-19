@@ -26,7 +26,7 @@
                   "var url=environment.url+\"/schedules/\"+environment.accesskey+\"/candidates\";",
                   "var method=\"GET\";",
                   "var limit=\"5\";",
-                  "var ir='{\"recommendation\":true}';",
+                  "var ir='{\"recommendation\":false}';",
                   "var params=ir+\"\\n\"+limit;",
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);",
