@@ -31,7 +31,8 @@
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);",
                   "postman.setGlobalVariable(\"ir_options\",ir);",
-                  "postman.setGlobalVariable(\"result_limit\",limit);"
+                  "postman.setGlobalVariable(\"result_limit\",limit);",
+                  "//access key-----476171c6"
                 ]
               }
             }
