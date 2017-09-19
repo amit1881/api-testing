@@ -137,7 +137,7 @@
                   "var ts = Math.round((new Date()).getTime() / 1000);",
                   "var ak=\"a139349a-893f-4974-92c2-ec278854610f\";",
                   "var pk=\"ff0dd9d8-21ec-4de3-892d-6be646b41464\";",
-                  "var url=\"http://api.mettl.xyz/v1/schedules/df0f3fa9/candidates\";",
+                  "var url=\"http://api.mettl.xyz/v1/schedules/9de355e9/candidates\";",
                   "var method=\"GET\";",
                   "var ir='{\"recommendation\":true}';",
                   "var str=method+url+\"\\n\"+ak+\"\\n\"+ir+\"\\n\"+ts;",
@@ -153,7 +153,7 @@
           ],
           "request": {
             "url": {
-              "raw": "http://api.mettl.xyz/v1/schedules/df0f3fa9/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
+              "raw": "http://api.mettl.xyz/v1/schedules/9de355e9/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
               "protocol": "http",
               "auth": {},
               "host": [
@@ -164,7 +164,7 @@
               "path": [
                 "v1",
                 "schedules",
-                "df0f3fa9",
+                "9de355e9",
                 "candidates"
               ],
               "query": [
