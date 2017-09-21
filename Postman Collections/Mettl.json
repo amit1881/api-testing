@@ -229,7 +229,7 @@
           ],
           "request": {
             "url": {
-              "raw": "{{url}}/schedules/{{accesskey}}/candidates/{{candidate_email_id}}?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&ir={{ir_options}}&limit={{result_limit}}",
+              "raw": "{{url}}/schedules/{{accesskey}}/candidates/{{candidate_email_id}}?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&ir={{ir_options}}",
               "auth": {},
               "host": [
                 "{{url}}"
@@ -262,12 +262,6 @@
                 {
                   "key": "ir",
                   "value": "{{ir_options}}",
-                  "equals": true,
-                  "description": ""
-                },
-                {
-                  "key": "limit",
-                  "value": "{{result_limit}}",
                   "equals": true,
                   "description": ""
                 }
