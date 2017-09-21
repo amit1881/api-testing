@@ -348,6 +348,83 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "75f6f1b7-67ad-af93-dbef-5d37198fec54",
+          "name": "http://api.mettl.com/v1/schedules/b0fd2b67/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ts = Math.round((new Date()).getTime() / 1000);",
+                  "var ak=\"42e36da8-a3a3-4de5-b215-c9a738ad8c0f\";",
+                  "var pk=\"d2ad2bef-1500-4cb3-90e2-72784d1a5a41\";",
+                  "var url=\"http://api.mettl.com/v1/schedules/b0fd2b67/candidates\";",
+                  "var method=\"GET\";",
+                  "var ir='{\"recommendation\":true}';",
+                  "var str=method+url+\"\\n\"+ak+\"\\n\"+ir+\"\\n\"+ts;",
+                  "var hash = CryptoJS.HmacSHA1(str, pk);",
+                  "var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "postman.setGlobalVariable(\"timestamp\", ts);",
+                  "postman.setGlobalVariable(\"apikey\", ak);",
+                  "postman.setGlobalVariable(\"signature\", hashInBase64);",
+                  "postman.setGlobalVariable(\"ir_options\",ir);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://api.mettl.com/v1/schedules/b0fd2b67/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "api",
+                "mettl",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "schedules",
+                "b0fd2b67",
+                "candidates"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ir",
+                  "value": "{{ir_options}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
