@@ -280,6 +280,74 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "4c74050f-4137-2a1c-3e4c-57fc30c99071",
+          "name": "{{url}}/candidates/{{candidate_email_id}}?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&ir={{ir_options}}",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ak=environment.ak;",
+                  "var pk=environment.pk;",
+                  "var url=environment.url+\"/candidates/\"+environment.candidate_email_id;",
+                  "var method=\"GET\";",
+                  "var ir='{\"recommendation\":true}';",
+                  "var params=ir;",
+                  "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
+                  "postman.setGlobalVariable(\"signature\", signature);",
+                  "postman.setGlobalVariable(\"ir_options\",ir);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{url}}/candidates/{{candidate_email_id}}?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&ir={{ir_options}}",
+              "auth": {},
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "candidates",
+                "{{candidate_email_id}}"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{ak}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{$timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ir",
+                  "value": "{{ir_options}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
