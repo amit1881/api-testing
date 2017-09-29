@@ -3222,7 +3222,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var as='{\"instructions\":\"HTML tags allowed\",\"onScreenCalculator\":true,\"exitRedirectionURL\":true,\"showReportToCandidate\":true,\"allowCopyPaste\":false}'",
+                  "var as='{\"instructions\":\"HTML tags allowed\",\"onScreenCalculator\":true,\"exitRedirectionURL\":http://null/#!/closeTest,\"showReportToCandidate\":true,\"allowCopyPaste\":false}'",
                   "var ak=environment.ak;",
                   "var pk=environment.pk;",
                   "var url=environment.url+\"/assessments/\"+environment.edit_assessment_id+\"/settings/edit\";",
