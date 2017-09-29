@@ -3212,6 +3212,75 @@
             "description": "CREATE ASSESSMENT"
           },
           "response": []
+        },
+        {
+          "_postman_id": "5907c7dc-0978-7ba8-d0a0-05eee6496c69",
+          "name": "EDIT ASSESSMENT SETTINGS------{{url}}/assessments/{{edit_assessment_id}}/settings/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&as={{edit_settings}}",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var as={\"instructions\":\"HTML tags allowed\",\"onScreenCalculator\":true,\"exitRedirectionURL\":true,\"showReportToCandidate\":true,\"allowCopyPaste\":false}",
+                  "var ak=environment.ak;",
+                  "var pk=environment.pk;",
+                  "var url=environment.url+\"/assessments/\"+environment.edit_assessment_id+\"/settings/edit\";",
+                  "var method=\"POST\";",
+                  "var signature=Utils.generateSignature(method,url,as,ak,pk,Utils.generateTimeStamp());",
+                  "postman.setGlobalVariable(\"signature\", signature);",
+                  "postman.setGlobalVariable(\"edit_settings\",as);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{url}}/assessments/{{edit_assessment_id}}/settings/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&as={{edit_settings}}",
+              "auth": {},
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "assessments",
+                "{{edit_assessment_id}}",
+                "settings",
+                "edit"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{ak}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{$timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "as",
+                  "value": "{{edit_settings}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [],
+            "body": {},
+            "description": "EDIT ASSESSMENT SETTINGS"
+          },
+          "response": []
         }
       ]
     },
