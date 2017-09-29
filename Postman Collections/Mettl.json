@@ -3154,7 +3154,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "var assessments ='{\"name\":\"as2\",\"duration\":0,\"instructions\":\"string\",\"allowCopyPaste\":true,\"exitRedirectionURL\":\"http://null/#!/closeTest\",sections\":[{\"name\":\"section 1\",\"duration\":\"30\",\"instructions\":\"string\",\"allQuestionsMandatory\":true,\"randomizeQuestions\":true,\"skills\":[{\"name\":\"check\",\"level\":\"easy\",\"questionCount\":1,\"questionType\":\"MCQ\",\"correctGrade\":1,\"incorrectGrade\":0}]}]}';\r",
+                  "var assessments ='{\"name\":\"assessment_info\",\"duration\":0,\"instructions\":\"string\",\"allowCopyPaste\":true,\"sections\":[{\"name\":\"section 1\",\"duration\":\"30\",\"instructions\":\"string\",\"allQuestionsMandatory\":true,\"randomizeQuestions\":true,\"skills\":[{\"name\":\"check\",\"level\":\"easy\",\"questionCount\":1,\"questionType\":\"MCQ\",\"correctGrade\":1,\"incorrectGrade\":0}]}]}';\r",
                   "var ak=environment.ak;\r",
                   "var pk=environment.pk;\r",
                   "var url=environment.url+\"/assessments\";\r",
