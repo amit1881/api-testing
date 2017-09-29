@@ -3144,6 +3144,72 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "a2893a2b-7678-1b1b-a315-543e64bb3781",
+          "name": "CREATE ASSESSMENT-----{{url}}/assessments?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&assessments={{assessments_prop}}",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var assessments ='{\"name\":\"as1\",\"duration\":0,\"instructions\":\"string\",\"allowCopyPaste\":true,\"sections\":[{\"name\":\"section 1\",\"duration\":\"30\",\"instructions\":\"string\",\"allQuestionsMandatory\":true,\"randomizeQuestions\":true,\"skills\":[{\"name\":\"check\",\"level\":\"easy\",\"questionCount\":1,\"questionType\":\"MCQ\",\"correctGrade\":1,\"incorrectGrade\":0}]}]}';\r",
+                  "var ak=environment.ak;\r",
+                  "var pk=environment.pk;\r",
+                  "var url=environment.url+\"/assessments\";\r",
+                  "var method=\"POST\";\r",
+                  "var signature=Utils.generateSignature(method,url,assessments,ak,pk,Utils.generateTimeStamp());\r",
+                  "postman.setGlobalVariable(\"signature\", signature);\r",
+                  "postman.setGlobalVariable(\"assessments_prop\",assessments);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "{{url}}/assessments?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&assessments={{assessments_prop}}",
+              "auth": {},
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "assessments"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{ak}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "ts",
+                  "value": "{{$timestamp}}",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "assessments",
+                  "value": "{{assessments_prop}}",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [],
+            "body": {},
+            "description": "CREATE ASSESSMENT"
+          },
+          "response": []
         }
       ]
     },
