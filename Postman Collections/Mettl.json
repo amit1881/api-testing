@@ -3161,7 +3161,9 @@
                   "var method=\"POST\";\r",
                   "var signature=Utils.generateSignature(method,url,assessments,ak,pk,Utils.generateTimeStamp());\r",
                   "postman.setGlobalVariable(\"signature\", signature);\r",
-                  "postman.setGlobalVariable(\"assessments_prop\",assessments);"
+                  "postman.setGlobalVariable(\"assessments_prop\",assessments);\r",
+                  "\r",
+                  "//Error :Invalid custom redirect URL format provided - http://null/#!/closeTest"
                 ]
               }
             }
