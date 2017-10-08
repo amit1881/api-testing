@@ -3465,6 +3465,9 @@
                 "exec": [
                   "Utils ={\r",
                   "    generateTimeStamp: function(){\r",
+                  "                        console.log(new Date());\r",
+                  "                        console.log((new Date()).getTime());\r",
+                  "                        console.log((new Date()).getTime()/1000);\r",
                   "                        var ts = Math.round((new Date()).getTime() / 1000);\r",
                   "                        return ts;\r",
                   "                    },\r",
