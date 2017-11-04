@@ -39,9 +39,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/schedules/{{accesskey}}/candidates?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&ir={{ir_options}}&limit={{result_limit}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -54,39 +56,30 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ir",
                   "value": "{{ir_options}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "limit",
                   "value": "{{result_limit}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -118,10 +111,42 @@
             }
           ],
           "request": {
-            "url": "http://api.mettl.com/v1/schedules/477d5acb/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
             "method": "GET",
             "header": [],
             "body": {},
+            "url": {
+              "raw": "http://api.mettl.com/v1/schedules/477d5acb/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
+              "protocol": "http",
+              "host": [
+                "api",
+                "mettl",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "schedules",
+                "477d5acb",
+                "candidates"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{apikey}}"
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}"
+                },
+                {
+                  "key": "ts",
+                  "value": "{{timestamp}}"
+                },
+                {
+                  "key": "ir",
+                  "value": "{{ir_options}}"
+                }
+              ]
+            },
             "description": ""
           },
           "response": []
@@ -153,10 +178,12 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "http://api.mettl.xyz/v1/schedules/250a46d5/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
               "protocol": "http",
-              "auth": {},
               "host": [
                 "api",
                 "mettl",
@@ -172,33 +199,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ir",
                   "value": "{{ir_options}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -228,9 +247,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/schedules/{{accesskey}}/candidates/{{candidate_email_id}}?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&ir={{ir_options}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -244,33 +265,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ir",
                   "value": "{{ir_options}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -298,9 +311,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/candidates/{{candidate_email_id}}?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&ir={{ir_options}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -312,33 +327,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ir",
                   "value": "{{ir_options}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -370,10 +377,12 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "http://api.mettl.com/v1/schedules/b0fd2b67/candidates?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&ir={{ir_options}}",
               "protocol": "http",
-              "auth": {},
               "host": [
                 "api",
                 "mettl",
@@ -389,33 +398,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ir",
                   "value": "{{ir_options}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -448,6 +449,32 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
+                  "Utils ={",
+                  "    generateTimeStamp: function(){",
+                  "                        console.log(new Date());",
+                  "                        console.log((new Date()).getTime());",
+                  "                        console.log((new Date()).getTime()/1000);",
+                  "                        var ts = Math.round((new Date()).getTime() / 1000);",
+                  "                        return ts;",
+                  "                    },",
+                  "                    ",
+                  "    generateSignature: function(request_method,request_url,request_params,api_key,private_key,time_stamp){",
+                  "                                var str;",
+                  "                                if(request_params===null){",
+                  "                                    str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+time_stamp;",
+                  "                                }",
+                  "                                else{",
+                  "                                    str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;",
+                  "                                }",
+                  "                        ",
+                  "                                var hash = CryptoJS.HmacSHA1(str, private_key);",
+                  "                                console.log(hash);",
+                  "                                var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "                                console.log(hashInBase64);",
+                  "                                    return hashInBase64;",
+                  "                    }",
+                  "                    ",
+                  "    };",
                   "var ak=environment.ak;",
                   "var pk=environment.pk;",
                   "var url=environment.url+\"/account\";",
@@ -460,9 +487,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -473,27 +502,20 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -529,9 +551,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=english",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -542,33 +566,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "languageCode",
                   "value": "english",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -604,9 +620,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=hindi",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -617,33 +635,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "languageCode",
                   "value": "hindi",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -679,9 +689,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=arabic",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -692,33 +704,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "languageCode",
                   "value": "arabic",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -754,9 +758,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=spanish",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -767,33 +773,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "languageCode",
                   "value": "spanish",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -829,9 +827,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=portuguese",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -842,33 +842,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "languageCode",
                   "value": "portuguese",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -904,9 +896,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=german",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -917,33 +911,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "languageCode",
                   "value": "german",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -979,9 +965,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=random",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -992,33 +980,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "languageCode",
                   "value": "random",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1061,9 +1041,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&limit=5",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1074,33 +1056,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "limit",
                   "value": "5",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1136,9 +1110,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&limit=5",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1149,33 +1125,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "limit",
                   "value": "5",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1211,9 +1179,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessmentid}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1226,27 +1196,20 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1282,9 +1245,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1295,27 +1260,20 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1352,9 +1310,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/schedules/{{accesskey}}?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1366,27 +1326,20 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1425,9 +1378,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessmentid}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1440,33 +1395,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1590,9 +1537,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessmentid}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1605,33 +1554,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1759,9 +1700,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessmentid}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1774,33 +1717,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1834,9 +1769,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1849,33 +1786,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1909,9 +1838,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1924,33 +1855,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -1984,9 +1907,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -1999,33 +1924,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2059,9 +1976,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2074,33 +1993,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2134,9 +2045,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2149,33 +2062,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2209,9 +2114,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2224,33 +2131,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2284,9 +2183,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2299,33 +2200,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2359,9 +2252,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2374,33 +2269,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2434,9 +2321,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2449,33 +2338,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2509,9 +2390,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2524,33 +2407,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2584,9 +2459,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2599,33 +2476,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2659,9 +2528,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2674,33 +2545,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2734,9 +2597,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2749,33 +2614,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2810,9 +2667,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/settings/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&as={{assessment_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2826,33 +2685,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "as",
                   "value": "{{assessment_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2899,9 +2750,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -2914,33 +2767,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -2999,9 +2844,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -3014,33 +2861,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -3099,9 +2938,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -3114,33 +2955,25 @@
                 {
                   "key": "ak",
                   "value": "{{apikey}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -3169,9 +3002,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&assessments={{assessments_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -3182,33 +3017,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "assessments",
                   "value": "{{assessments_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": "CREATE ASSESSMENT"
           },
           "response": []
@@ -3235,9 +3062,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/assessments/{{edit_assessment_id}}/settings/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&as={{edit_settings}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -3251,33 +3080,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "as",
                   "value": "{{edit_settings}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": "EDIT ASSESSMENT SETTINGS"
           },
           "response": []
@@ -3320,9 +3141,11 @@
             }
           ],
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/pbts?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -3333,27 +3156,20 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -3391,9 +3207,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/v1/pbts/add?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&pbts=[622]",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -3406,33 +3224,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "pbts",
                   "value": "[622]",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -3505,9 +3315,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/schedules/{{accesskey}}/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -3520,33 +3332,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
@@ -3583,9 +3387,11 @@
             }
           ],
           "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "{{url}}/schedules/{{accesskey}}/edit?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
-              "auth": {},
               "host": [
                 "{{url}}"
               ],
@@ -3598,33 +3404,25 @@
                 {
                   "key": "ak",
                   "value": "{{ak}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "asgn",
                   "value": "{{signature}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "ts",
                   "value": "{{$timestamp}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "sc",
                   "value": "{{schedule_prop}}",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "POST",
-            "header": [],
-            "body": {},
             "description": ""
           },
           "response": []
