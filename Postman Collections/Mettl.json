@@ -483,7 +483,7 @@
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);",
                   "",
-                  "postman.setGlobalVariable(\"gl\",Utils);"
+                  "postman.setGlobalVariable(\"gl\",Object.values(Utils));"
                 ]
               }
             }
