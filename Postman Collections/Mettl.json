@@ -481,7 +481,9 @@
                   "var method=\"GET\";",
                   "var params=null;",
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
-                  "postman.setGlobalVariable(\"signature\", signature);"
+                  "postman.setGlobalVariable(\"signature\", signature);",
+                  "",
+                  "postman.setGlobalVariable(\"gl\",Utils);"
                 ]
               }
             }
