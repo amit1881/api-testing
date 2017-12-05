@@ -434,7 +434,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "5152d377-c88f-413c-af46-765e54d2b49e",
+                "id": "41ee0936-2c8f-4e82-9e3c-429ad5c345e8",
                 "type": "text/javascript",
                 "exec": [
                   "Utils ={",
@@ -470,7 +470,7 @@
                   "var params=null;",
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);",
-                  "postman.setGlobalVariable(\"Utils\", Utils);"
+                  "postman.setGlobalVariable(\"signature\", signature);"
                 ]
               }
             },
