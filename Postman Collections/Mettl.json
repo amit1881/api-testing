@@ -434,6 +434,7 @@
             {
               "listen": "prerequest",
               "script": {
+                "id": "5152d377-c88f-413c-af46-765e54d2b49e",
                 "type": "text/javascript",
                 "exec": [
                   "Utils ={",
@@ -468,13 +469,15 @@
                   "var method=\"GET\";",
                   "var params=null;",
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
-                  "postman.setGlobalVariable(\"signature\", signature);"
+                  "postman.setGlobalVariable(\"signature\", signature);",
+                  "postman.setGlobalVariable(\"Utils\", Utils);"
                 ]
               }
             },
             {
               "listen": "test",
               "script": {
+                "id": "3940ba25-96c0-4ea0-8762-3cc238a95941",
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
