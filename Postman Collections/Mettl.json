@@ -1,5 +1,4 @@
 {
-  "variables": [],
   "info": {
     "name": "Mettl",
     "_postman_id": "7732fe53-4df8-f164-459d-ee7892eff07f",
@@ -433,18 +432,6 @@
           "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests.verifyResponseOfGetAccountApiWithoutLanguageKey=jsonData.status===\"SUCCESS\";",
-                  "",
-                  ""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -482,6 +469,18 @@
                   "var params=null;",
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests.verifyResponseOfGetAccountApiWithoutLanguageKey=jsonData.status===\"SUCCESS\";",
+                  "",
+                  ""
                 ]
               }
             }
@@ -525,16 +524,6 @@
           "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=english",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyEnglish\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -546,6 +535,16 @@
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyEnglish\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -594,16 +593,6 @@
           "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=hindi",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyHindi\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -615,6 +604,16 @@
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyHindi\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -663,16 +662,6 @@
           "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=arabic",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyArabic\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -684,6 +673,16 @@
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyArabic\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -732,16 +731,6 @@
           "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=spanish",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeySpanish\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -753,6 +742,16 @@
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeySpanish\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -801,16 +800,6 @@
           "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=portuguese",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyPortuguese\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -822,6 +811,16 @@
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyPortuguese\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -870,16 +869,6 @@
           "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=german",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyGerman\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -891,6 +880,16 @@
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyGerman\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -939,16 +938,6 @@
           "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=random",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyRandom\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -960,6 +949,16 @@
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyRandom\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -1015,16 +1014,6 @@
           "name": "http://api.mettl.info/v1/assessments?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&limit=5",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnRetrievingAssessmentsOfAnAccount\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -1036,6 +1025,16 @@
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,limit,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnRetrievingAssessmentsOfAnAccount\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -1084,16 +1083,6 @@
           "name": "http://api.mettl.info/v1/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&limit=5",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnRetrievingLimitedSchedulesOfAnAccount\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -1105,6 +1094,16 @@
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,limit,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnRetrievingLimitedSchedulesOfAnAccount\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -1153,16 +1152,6 @@
           "name": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnRetrievingSchedulesOfAnAssessment\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -1174,6 +1163,16 @@
                   "var params=null;",
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnRetrievingSchedulesOfAnAssessment\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -1219,16 +1218,6 @@
           "name": "{{url}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnRetrievingSchedulesOfAnAccount\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -1240,6 +1229,16 @@
                   "var params=null;",
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnRetrievingSchedulesOfAnAccount\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -1283,17 +1282,6 @@
           "name": "{{url}}/schedules/{{access-key}}?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnRetrievingDetailsOfASchedule\"]=jsonData.status===\"SUCCESS\"",
-                  "tests[\"verifyScheduleKey\"]=jsonData.schedule.accessKey===environment.accesskey"
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -1305,6 +1293,17 @@
                   "var params=null;",
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnRetrievingDetailsOfASchedule\"]=jsonData.status===\"SUCCESS\"",
+                  "tests[\"verifyScheduleKey\"]=jsonData.schedule.accessKey===environment.accesskey"
                 ]
               }
             }
@@ -1349,16 +1348,6 @@
           "name": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnCreatingScheduleWithoutBrowsingTolerance\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -1373,6 +1362,16 @@
                   "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
                   "//'+Math.random()+'\r",
                   ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnCreatingScheduleWithoutBrowsingTolerance\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -1422,6 +1421,49 @@
           "_postman_id": "0552b970-403e-e64b-ba4b-900470c82327",
           "name": "{{url}}/assessments/{{assessment-id}}/schedules?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
           "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ak=environment.ak;\r",
+                  "var pk=environment.pk;\r",
+                  "/*\r",
+                  "var sc1 ='{\"assessmentId\": 111908,\"name\": \"Schedule10\",\"scheduleType\": \"AlwaysOn\",\"scheduleWindow\": null,\"webProctoring\": { \"enabled\": false},\"imageProctoring\": true,\"isCandidateAuthProctored\" : true,\"visualProctoring\": {\"mode\": \"OFF\",\"options\": {\"candidateScreenCapture\": true,\"candidateAuthorization\": false}},\"access\": { \"type\": \"OpenForAll\",\"candidates\": null, \"sendEmail\": false},\"sourceApp\": \"postmanclient\"}';\r",
+                  "*/\r",
+                  "var sc={};\r",
+                  "var wp={};\r",
+                  "var vp={};\r",
+                  "var op={};\r",
+                  "var ac={};\r",
+                  "sc.assessmentId=111908;\r",
+                  "sc.name=Math.random();\r",
+                  "sc.scheduleType=\"AlwaysOn\";\r",
+                  "sc.scheduleWindow=null;\r",
+                  "wp.enabled=false;\r",
+                  "sc.webProctoring=wp;\r",
+                  "sc.imageProctoring=true;\r",
+                  "sc.isCandidateAuthProctored=true;\r",
+                  "op.candidateScreenCapture=true;\r",
+                  "op.candidateAuthorization=false;\r",
+                  "vp.mode=\"OFF\";\r",
+                  "vp.options=op;\r",
+                  "sc.visualProctoring=vp;\r",
+                  "ac.type=\"OpenForAll\";\r",
+                  "ac.candidates=null;\r",
+                  "ac.sendEmail=false;\r",
+                  "sc.access=ac;\r",
+                  "sc.sourceApp=\"postmanclient\";\r",
+                  "sc=JSON.stringify(sc);\r",
+                  "var url=environment.url+\"/assessments/\"+environment.assessmentid+\"/schedules\";\r",
+                  "var method=\"POST\";\r",
+                  "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
+                  "postman.setGlobalVariable(\"signature\", signature);\r",
+                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
+                  ""
+                ]
+              }
+            },
             {
               "listen": "test",
               "script": {
@@ -1491,49 +1533,6 @@
                   ""
                 ]
               }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var ak=environment.ak;\r",
-                  "var pk=environment.pk;\r",
-                  "/*\r",
-                  "var sc1 ='{\"assessmentId\": 111908,\"name\": \"Schedule10\",\"scheduleType\": \"AlwaysOn\",\"scheduleWindow\": null,\"webProctoring\": { \"enabled\": false},\"imageProctoring\": true,\"isCandidateAuthProctored\" : true,\"visualProctoring\": {\"mode\": \"OFF\",\"options\": {\"candidateScreenCapture\": true,\"candidateAuthorization\": false}},\"access\": { \"type\": \"OpenForAll\",\"candidates\": null, \"sendEmail\": false},\"sourceApp\": \"postmanclient\"}';\r",
-                  "*/\r",
-                  "var sc={};\r",
-                  "var wp={};\r",
-                  "var vp={};\r",
-                  "var op={};\r",
-                  "var ac={};\r",
-                  "sc.assessmentId=111908;\r",
-                  "sc.name=Math.random();\r",
-                  "sc.scheduleType=\"AlwaysOn\";\r",
-                  "sc.scheduleWindow=null;\r",
-                  "wp.enabled=false;\r",
-                  "sc.webProctoring=wp;\r",
-                  "sc.imageProctoring=true;\r",
-                  "sc.isCandidateAuthProctored=true;\r",
-                  "op.candidateScreenCapture=true;\r",
-                  "op.candidateAuthorization=false;\r",
-                  "vp.mode=\"OFF\";\r",
-                  "vp.options=op;\r",
-                  "sc.visualProctoring=vp;\r",
-                  "ac.type=\"OpenForAll\";\r",
-                  "ac.candidates=null;\r",
-                  "ac.sendEmail=false;\r",
-                  "sc.access=ac;\r",
-                  "sc.sourceApp=\"postmanclient\";\r",
-                  "sc=JSON.stringify(sc);\r",
-                  "var url=environment.url+\"/assessments/\"+environment.assessmentid+\"/schedules\";\r",
-                  "var method=\"POST\";\r",
-                  "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
-                  "postman.setGlobalVariable(\"signature\", signature);\r",
-                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
-                  ""
-                ]
-              }
             }
           ],
           "request": {
@@ -1581,6 +1580,49 @@
           "_postman_id": "888f63ed-032d-ae28-6685-5a3c8a2a5cac",
           "name": "{{url}}/assessments/{{assessmentid}}/schedules?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&sc={{schedule_prop}}",
           "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var ak=environment.ak;\r",
+                  "var pk=environment.pk;\r",
+                  "/*\r",
+                  "var sc1 ='{\"assessmentId\": 111908,\"name\": \"Schedule10\",\"scheduleType\": \"AlwaysOn\",\"scheduleWindow\": null,\"webProctoring\": { \"enabled\": false},\"imageProctoring\": true,\"isCandidateAuthProctored\" : true,\"visualProctoring\": {\"mode\": \"OFF\",\"options\": {\"candidateScreenCapture\": true,\"candidateAuthorization\": false}},\"access\": { \"type\": \"OpenForAll\",\"candidates\": null, \"sendEmail\": false},\"sourceApp\": \"postmanclient\"}';\r",
+                  "*/\r",
+                  "var sc={};\r",
+                  "var wp={};\r",
+                  "var vp={};\r",
+                  "var op={};\r",
+                  "var ac={};\r",
+                  "sc.assessmentId=environment.assessmentid;\r",
+                  "sc.name=Math.random();\r",
+                  "sc.scheduleType=\"AlwaysOn\";\r",
+                  "sc.scheduleWindow=null;\r",
+                  "wp.enabled=false;\r",
+                  "sc.webProctoring=wp;\r",
+                  "sc.imageProctoring=false;\r",
+                  "sc.isCandidateAuthProctored=false;\r",
+                  "op.candidateScreenCapture=true;\r",
+                  "op.candidateAuthorization=false;\r",
+                  "vp.mode=\"VIDEO\";\r",
+                  "vp.options=op;\r",
+                  "sc.visualProctoring=vp;\r",
+                  "ac.type=\"OpenForAll\";\r",
+                  "ac.candidates=null;\r",
+                  "ac.sendEmail=false;\r",
+                  "sc.access=ac;\r",
+                  "sc.sourceApp=\"postmanclient\";\r",
+                  "sc=JSON.stringify(sc);\r",
+                  "var url=environment.url+\"/assessments/\"+environment.assessmentid+\"/schedules\";\r",
+                  "var method=\"POST\";\r",
+                  "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
+                  "postman.setGlobalVariable(\"signature\", signature);\r",
+                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
+                  ""
+                ]
+              }
+            },
             {
               "listen": "test",
               "script": {
@@ -1651,49 +1693,6 @@
                   "",
                   "",
                   "",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var ak=environment.ak;\r",
-                  "var pk=environment.pk;\r",
-                  "/*\r",
-                  "var sc1 ='{\"assessmentId\": 111908,\"name\": \"Schedule10\",\"scheduleType\": \"AlwaysOn\",\"scheduleWindow\": null,\"webProctoring\": { \"enabled\": false},\"imageProctoring\": true,\"isCandidateAuthProctored\" : true,\"visualProctoring\": {\"mode\": \"OFF\",\"options\": {\"candidateScreenCapture\": true,\"candidateAuthorization\": false}},\"access\": { \"type\": \"OpenForAll\",\"candidates\": null, \"sendEmail\": false},\"sourceApp\": \"postmanclient\"}';\r",
-                  "*/\r",
-                  "var sc={};\r",
-                  "var wp={};\r",
-                  "var vp={};\r",
-                  "var op={};\r",
-                  "var ac={};\r",
-                  "sc.assessmentId=environment.assessmentid;\r",
-                  "sc.name=Math.random();\r",
-                  "sc.scheduleType=\"AlwaysOn\";\r",
-                  "sc.scheduleWindow=null;\r",
-                  "wp.enabled=false;\r",
-                  "sc.webProctoring=wp;\r",
-                  "sc.imageProctoring=false;\r",
-                  "sc.isCandidateAuthProctored=false;\r",
-                  "op.candidateScreenCapture=true;\r",
-                  "op.candidateAuthorization=false;\r",
-                  "vp.mode=\"VIDEO\";\r",
-                  "vp.options=op;\r",
-                  "sc.visualProctoring=vp;\r",
-                  "ac.type=\"OpenForAll\";\r",
-                  "ac.candidates=null;\r",
-                  "ac.sendEmail=false;\r",
-                  "sc.access=ac;\r",
-                  "sc.sourceApp=\"postmanclient\";\r",
-                  "sc=JSON.stringify(sc);\r",
-                  "var url=environment.url+\"/assessments/\"+environment.assessmentid+\"/schedules\";\r",
-                  "var method=\"POST\";\r",
-                  "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
-                  "postman.setGlobalVariable(\"signature\", signature);\r",
-                  "postman.setGlobalVariable(\"schedule_prop\",sc);\r",
                   ""
                 ]
               }
@@ -3115,16 +3114,6 @@
           "name": "http://api.mettl.info/v1/pbts?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnRetrievingAllPbtsOfAnAccount\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -3136,6 +3125,16 @@
                   "var params=null;",
                   "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
                   "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnRetrievingAllPbtsOfAnAccount\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -3179,29 +3178,57 @@
           "name": "http://api.mettl.info/v1/pbts/add?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&pbts=[1]",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "id": "282fb1a7-7f3a-42fa-9cc4-37ceb3929d0c",
+                "type": "text/javascript",
+                "exec": [
+                  "Utils ={",
+                  "    generateTimeStamp: function(){",
+                  "                        console.log(new Date());",
+                  "                        console.log((new Date()).getTime());",
+                  "                        console.log((new Date()).getTime()/1000);",
+                  "                        var ts = Math.round((new Date()).getTime() / 1000);",
+                  "                        return ts;",
+                  "                    },",
+                  "                    ",
+                  "    generateSignature: function(request_method,request_url,request_params,api_key,private_key,time_stamp){",
+                  "                                var str;",
+                  "                                if(request_params===null){",
+                  "                                    str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+time_stamp;",
+                  "                                }",
+                  "                                else{",
+                  "                                    str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;",
+                  "                                }",
+                  "                        ",
+                  "                                var hash = CryptoJS.HmacSHA1(str, private_key);",
+                  "                                console.log(hash);",
+                  "                                var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "                                console.log(hashInBase64);",
+                  "                                    return hashInBase64;",
+                  "                    }",
+                  "                    ",
+                  "    };",
+                  "var ak=environment.ak;",
+                  "var pk=environment.pk;",
+                  "var pbts=\"[676]\";",
+                  "var url=environment.url+\"/pbts/add\";",
+                  "var method=\"POST\";",
+                  "var signature=Utils.generateSignature(method,url,pbts,ak,pk,Utils.generateTimeStamp());",
+                  "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
+                "id": "1175ed60-c543-4928-95d0-d70704de760f",
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "tests[\"verifyErrorIfPbtIsAlreadyAdded\"]=jsonData.status===\"ERROR\"",
                   "tests[\"verifyBooleanValueIfPbtIsAlreadyAdded\"]=jsonData.pbts[0].added===false",
                   "tests[\"verifyErrorMessageIfPbtIsAlreadyAdded\"]=jsonData.pbts[0].message===\"SQLException: pbt assessment already added\""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var ak=environment.ak;",
-                  "var pk=environment.pk;",
-                  "var pbts=\"[622]\";",
-                  "var url=environment.url+\"/pbts/add\";",
-                  "var method=\"POST\";",
-                  "var signature=Utils.generateSignature(method,url,pbts,ak,pk,Utils.generateTimeStamp());",
-                  "postman.setGlobalVariable(\"signature\", signature);"
                 ]
               }
             }
@@ -3211,12 +3238,11 @@
             "header": [],
             "body": {},
             "url": {
-              "raw": "{{url}}/v1/pbts/add?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&pbts=[622]",
+              "raw": "{{url}}/pbts/add?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&pbts=[676]",
               "host": [
                 "{{url}}"
               ],
               "path": [
-                "v1",
                 "pbts",
                 "add"
               ],
@@ -3238,7 +3264,7 @@
                 },
                 {
                   "key": "pbts",
-                  "value": "[622]",
+                  "value": "[676]",
                   "equals": true
                 }
               ]
@@ -3258,16 +3284,6 @@
           "_postman_id": "5be60bc7-0414-8aab-c358-325d3e59c323",
           "name": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}} copy",
           "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnEditSchedule\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
             {
               "listen": "prerequest",
               "script": {
@@ -3310,6 +3326,16 @@
                   "postman.setGlobalVariable(\"signature\", signature);\r",
                   "postman.setGlobalVariable(\"schedule_prop\", sc);\r",
                   ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnEditSchedule\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
@@ -3360,16 +3386,6 @@
           "name": "{{url}}/schedules/{{access-key}}/edit?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&sc={{schedule_prop}}",
           "event": [
             {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifySuccessOnEditSchedule\"]=jsonData.status===\"SUCCESS\""
-                ]
-              }
-            },
-            {
               "listen": "prerequest",
               "script": {
                 "type": "text/javascript",
@@ -3382,6 +3398,16 @@
                   "var signature=Utils.generateSignature(method,url,sc,ak,pk,Utils.generateTimeStamp());\r",
                   "postman.setGlobalVariable(\"signature\", signature);\r",
                   "postman.setGlobalVariable(\"schedule_prop\",sc);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifySuccessOnEditSchedule\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
