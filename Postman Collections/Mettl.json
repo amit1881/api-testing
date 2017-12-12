@@ -735,6 +735,7 @@
             {
               "listen": "prerequest",
               "script": {
+                "id": "91f2981e-e740-447c-9180-ab429333b6b3",
                 "type": "text/javascript",
                 "exec": [
                   "var ak=environment.ak;",
@@ -750,10 +751,11 @@
             {
               "listen": "test",
               "script": {
+                "id": "cb209438-1040-478c-bda5-25e754279444",
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeySpanish\"]=jsonData.status===\"SUCCESS\""
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyHindi\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
