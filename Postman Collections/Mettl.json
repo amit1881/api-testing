@@ -751,11 +751,11 @@
             {
               "listen": "test",
               "script": {
-                "id": "cb209438-1040-478c-bda5-25e754279444",
+                "id": "5994b231-cf3d-4aaa-a8de-1b9c80a7962a",
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyHindi\"]=jsonData.status===\"SUCCESS\""
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeySpanish\"]=jsonData.status===\"SUCCESS\""
                 ]
               }
             }
