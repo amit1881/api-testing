@@ -434,7 +434,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "eb00e5d2-cddd-46b8-993f-b510f4d74b9e",
+                "id": "7efc6315-aa94-47eb-84b3-eb78246bd3c3",
                 "type": "text/javascript",
                 "exec": [
                   "Utils ={",
@@ -455,7 +455,7 @@
                   "                                    str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;",
                   "                                }",
                   "                        ",
-                  "                                var hash = CryptoJS.HmacSHA1(str, private_key);",
+                  "                                var hash = CryptoJS.HmacSHA1(str.getBytes(\"UTF-8\"), private_key.getBytes(\"UTF-8\"));",
                   "                                console.log(hash);",
                   "                                var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
                   "                                console.log(hashInBase64);",
