@@ -434,7 +434,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "3b0bdb89-b750-4bef-b670-e730e2759b4d",
+                "id": "dd2093f3-e58e-4348-a9c7-78fc7da5d800",
                 "type": "text/javascript",
                 "exec": [
                   "Utils ={",
@@ -448,14 +448,18 @@
                   "                    ",
                   "    generateSignature: function(request_method,request_url,request_params,api_key,private_key,time_stamp){",
                   "                                var str;",
+                  "                                var strBytes;",
+                  "                                var pkBytes=Utils.stringToBytes(private_key);",
                   "                                if(request_params===null){",
                   "                                    str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+time_stamp;",
+                  "                                    strBytes=Utils.stringToBytes(str);",
                   "                                }",
                   "                                else{",
                   "                                    str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;",
+                  "                                    strBytes=Utils.stringToBytes(str);",
                   "                                }",
                   "                        ",
-                  "                                var hash = CryptoJS.HmacSHA1(CryptoJS.enc.Utf8.toString(str), CryptoJS.enc.Utf8.toString(private_key));",
+                  "                                var hash = CryptoJS.HmacSHA1(strBytes.toString(CryptoJS.enc.Utf8), pkBytes.toString(CryptoJS.enc.Utf8));",
                   "                                console.log(hash);",
                   "                                var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
                   "                                console.log(hashInBase64);",
