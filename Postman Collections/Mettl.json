@@ -3561,5 +3561,52 @@
         }
       ]
     }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "f0201cc7-2321-4400-96f0-1b911c9a0bb7",
+        "type": "text/javascript",
+        "exec": [
+          "Utils ={",
+          "    generateTimeStamp: function(){",
+          "                        console.log(new Date());",
+          "                        console.log((new Date()).getTime());",
+          "                        console.log((new Date()).getTime()/1000);",
+          "                        var ts = Math.round((new Date()).getTime() / 1000);",
+          "                        return ts;",
+          "                    },",
+          "                    ",
+          "    generateSignature: function(request_method,request_url,request_params,api_key,private_key,time_stamp){",
+          "                                var str;",
+          "                                if(request_params===null){",
+          "                                    str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+time_stamp;",
+          "                                }",
+          "                                else{",
+          "                                    str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;",
+          "                                }",
+          "                        ",
+          "                                var hash = CryptoJS.HmacSHA1(str, private_key);",
+          "                                console.log(hash);",
+          "                                var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+          "                                console.log(hashInBase64);",
+          "                                    return hashInBase64;",
+          "                    }",
+          "                    ",
+          "    };"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "7cb505a9-79a3-424c-8a17-8ef5d87677fd",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
   ]
 }
