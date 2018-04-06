@@ -3705,7 +3705,82 @@
       "_postman_id": "047ceb9c-f56a-4b90-a202-4dc7f07a6b38",
       "name": "account_mock",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "5a2e9be2-bad5-45d8-8850-e1a1af3ab8c2",
+          "name": "https://490809e5-d8fb-46ef-b68b-b65bc2802f34.mock.pstmn.io/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=english",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "47834a61-bea3-4757-b433-8a00ca43da96",
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests.verifyResponseOfGetAccountApiWithLanguageKeyEnglish=jsonData.status===\"SUCCESS\";"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "8d84f084-8b9f-4c84-a6a1-cf0af5fdcef7",
+                "type": "text/javascript",
+                "exec": [
+                  "var ak=environment.ak;",
+                  "var pk=environment.pk;",
+                  "var lc=\"english\";",
+                  "var url=environment.url+\"/account\";",
+                  "var method=\"GET\";",
+                  "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
+                  "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://490809e5-d8fb-46ef-b68b-b65bc2802f34.mock.pstmn.io/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=english",
+              "protocol": "https",
+              "host": [
+                "490809e5-d8fb-46ef-b68b-b65bc2802f34",
+                "mock",
+                "pstmn",
+                "io"
+              ],
+              "path": [
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{ak}}",
+                  "equals": true
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true
+                },
+                {
+                  "key": "ts",
+                  "value": "{{$timestamp}}",
+                  "equals": true
+                },
+                {
+                  "key": "languageCode",
+                  "value": "english",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ],
   "event": [
