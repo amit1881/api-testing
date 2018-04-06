@@ -3234,17 +3234,18 @@
             {
               "listen": "prerequest",
               "script": {
+                "id": "931cf951-b457-4062-a9d7-c50f470dc743",
                 "type": "text/javascript",
                 "exec": [
-                  "var assessments ='{\"name\":\"as6\",\"duration\":0,\"instructions\":\"string\",\"allowCopyPaste\":true,\"exitRedirectionURL\":\"mettl.com\",\"sections\":[{\"name\":\"section 1\",\"duration\":\"30\",\"instructions\":\"string\",\"allQuestionsMandatory\":true,\"randomizeQuestions\":true,\"skills\":[{\"name\":\"check\",\"level\":\"easy\",\"questionCount\":1,\"questionType\":\"MCQ\",\"correctGrade\":1,\"incorrectGrade\":0}]}]}';\r",
-                  "var ak=environment.ak;\r",
-                  "var pk=environment.pk;\r",
-                  "var url=environment.url+\"/assessments\";\r",
-                  "var method=\"POST\";\r",
-                  "var signature=Utils.generateSignature(method,url,assessments,ak,pk,Utils.generateTimeStamp());\r",
-                  "postman.setGlobalVariable(\"signature\", signature);\r",
-                  "postman.setGlobalVariable(\"assessments_prop\",assessments);\r",
-                  "\r",
+                  "var assessments ='{\"name\":\"as7\",\"duration\":0,\"instructions\":\"string\",\"allowCopyPaste\":true,\"exitRedirectionURL\":\"mettl.com\",\"sections\":[{\"name\":\"section 1\",\"duration\":\"30\",\"instructions\":\"string\",\"allQuestionsMandatory\":true,\"randomizeQuestions\":true,\"skills\":[{\"name\":\"checkkk\",\"level\":\"easy\",\"questionCount\":1,\"questionType\":\"MCQ\",\"correctGrade\":1,\"incorrectGrade\":0}]}]}';",
+                  "var ak=environment.ak;",
+                  "var pk=environment.pk;",
+                  "var url=environment.url+\"/assessments\";",
+                  "var method=\"POST\";",
+                  "var signature=Utils.generateSignature(method,url,assessments,ak,pk,Utils.generateTimeStamp());",
+                  "postman.setGlobalVariable(\"signature\", signature);",
+                  "postman.setGlobalVariable(\"assessments_prop\",assessments);",
+                  "",
                   "//Error :Invalid custom redirect URL format provided - http://null/#!/closeTest"
                 ]
               }
