@@ -3724,12 +3724,12 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "19c8af6d-db1a-4d01-ba28-631737008ef6",
+                "id": "0597d1b1-7f66-40c9-9eac-1a852ea98b04",
                 "type": "text/javascript",
                 "exec": [
                   "var ak=environment.ak;",
                   "var pk=environment.pk;",
-                  "var lc=\"hindi\";",
+                  "var lc=\"english\";",
                   "var url=environment.url+\"/account\";",
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
@@ -3743,7 +3743,7 @@
             "header": [],
             "body": {},
             "url": {
-              "raw": "https://490809e5-d8fb-46ef-b68b-b65bc2802f34.mock.pstmn.io/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=hindi",
+              "raw": "https://490809e5-d8fb-46ef-b68b-b65bc2802f34.mock.pstmn.io/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=english",
               "protocol": "https",
               "host": [
                 "490809e5-d8fb-46ef-b68b-b65bc2802f34",
@@ -3772,7 +3772,7 @@
                 },
                 {
                   "key": "languageCode",
-                  "value": "hindi",
+                  "value": "english",
                   "equals": true
                 }
               ]
