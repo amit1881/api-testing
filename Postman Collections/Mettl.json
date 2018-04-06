@@ -776,7 +776,7 @@
         },
         {
           "_postman_id": "466decfa-38ec-7449-8042-ae892db29b15",
-          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=hindi",
+          "name": "get account details with hindi crfs",
           "event": [
             {
               "listen": "prerequest",
