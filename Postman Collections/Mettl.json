@@ -937,7 +937,7 @@
         },
         {
           "_postman_id": "f7088dfe-79f0-34ce-22de-ee6a03f9faa4",
-          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=arabic",
+          "name": "get account details with arabic crfs",
           "event": [
             {
               "listen": "prerequest",
