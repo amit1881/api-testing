@@ -3700,6 +3700,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "047ceb9c-f56a-4b90-a202-4dc7f07a6b38",
+      "name": "account_mock",
+      "description": "",
+      "item": []
     }
   ],
   "event": [
