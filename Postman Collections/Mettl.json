@@ -3234,10 +3234,10 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "d655512d-3290-4138-b229-5cb72cdbc6cf",
+                "id": "97ac1c79-8c1f-44d2-9e24-5645e3fdf263",
                 "type": "text/javascript",
                 "exec": [
-                  "var assessments ='{\"name\":\"as8\",\"duration\":0,\"instructions\":\"string\",\"allowCopyPaste\":true,\"exitRedirectionURL\":\"mettl.com\",\"sections\":[{\"name\":\"section 1\",\"duration\":\"30\",\"instructions\":\"string\",\"allQuestionsMandatory\":true,\"randomizeQuestions\":true,\"skills\":[{\"name\":\"checkkk\",\"level\":\"easy\",\"questionCount\":1,\"questionType\":\"MCQ\",\"correctGrade\":1,\"incorrectGrade\":0}]}]}';",
+                  "var assessments ='{\"name\":\"as8\",\"duration\":0,\"instructions\":\"string\",\"allowCopyPaste\":true,\"exitRedirectionURL\":\"mettl.com\",\"sections\":[{\"name\":\"section 1\",\"duration\":\"30\",\"instructions\":\"string\",\"allQuestionsMandatory\":true,\"randomizeQuestions\":true,\"skills\":[{\"name\":\"check\",\"level\":\"easy\",\"questionCount\":1,\"questionType\":\"MCQ\",\"correctGrade\":1,\"incorrectGrade\":0}]}]}';",
                   "var ak=environment.ak;",
                   "var pk=environment.pk;",
                   "var url=environment.url+\"/assessments\";",
