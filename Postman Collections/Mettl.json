@@ -503,7 +503,7 @@
       "item": [
         {
           "_postman_id": "3ec23546-4c40-4a96-2993-597ca18e18f3",
-          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}",
+          "name": "get account details with defautl crf",
           "event": [
             {
               "listen": "prerequest",
@@ -3852,7 +3852,156 @@
               ]
             }
           },
-          "response": []
+          "response": [
+            {
+              "id": "8525af11-4af6-4dff-9b38-9856975323d6",
+              "name": "get account details with hindi crfs",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": {
+                  "raw": "https://490809e5-d8fb-46ef-b68b-b65bc2802f34.mock.pstmn.io/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=hindi",
+                  "protocol": "https",
+                  "host": [
+                    "490809e5-d8fb-46ef-b68b-b65bc2802f34",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "account"
+                  ],
+                  "query": [
+                    {
+                      "key": "ak",
+                      "value": "{{ak}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "asgn",
+                      "value": "{{signature}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "ts",
+                      "value": "{{$timestamp}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "languageCode",
+                      "value": "hindi",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "",
+                  "name": "Access-Control-Allow-Credentials",
+                  "description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "",
+                  "name": "Access-Control-Allow-Headers",
+                  "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "",
+                  "name": "Access-Control-Allow-Methods",
+                  "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "name": "Access-Control-Allow-Origin",
+                  "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+                },
+                {
+                  "key": "Access-Control-Expose-Headers",
+                  "value": "",
+                  "name": "Access-Control-Expose-Headers",
+                  "description": "Lets a server whitelist headers that browsers are allowed to access."
+                },
+                {
+                  "key": "Connection",
+                  "value": "Close",
+                  "name": "Connection",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip",
+                  "name": "Content-Encoding",
+                  "description": "The type of encoding used on the data."
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "454",
+                  "name": "Content-Length",
+                  "description": "The length of the response body in octets (8-bit bytes)"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "name": "Content-Type",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 06 Apr 2018 07:50:15 GMT",
+                  "name": "Date",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3ce-fAGYXtQLGfzCh3RYtmJJ6g\"",
+                  "name": "ETag",
+                  "description": "An identifier for a specific version of a resource, often a message digest"
+                },
+                {
+                  "key": "Proxy-Connection",
+                  "value": "Keep-alive",
+                  "name": "Proxy-Connection",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "Server",
+                  "value": "nginx",
+                  "name": "Server",
+                  "description": "A name for the server"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "name": "Vary",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "key": "X-Application-Context",
+                  "value": "mettl-api-gateway:aws:8000",
+                  "name": "X-Application-Context",
+                  "description": "Custom header"
+                },
+                {
+                  "key": "X-Rate-Limit-Remaining",
+                  "value": "3499",
+                  "name": "X-Rate-Limit-Remaining",
+                  "description": "Custom header"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"status\": \"SUCCESS\",\n    \"accountInfo\": {\n        \"email\": \"amit.singh1@mettl.com\",\n        \"firstName\": \"Amit\",\n        \"lastName\": null,\n        \"accountType\": \"ENTERPRISE\",\n        \"logoPath\": \"https://mettl.xyz/logo/11088.png\",\n        \"whiteLabelInfo\": {\n            \"headerBackgroundColor\": null,\n            \"headerFontColor\": null,\n            \"buttonColor\": null,\n            \"buttonFontColor\": null,\n            \"customTestUrl\": null,\n            \"cssPath\": \"//static.mettl.xyz/clientTheme/null\",\n            \"faviconPath\": \"//static.mettl.xyz/favicon/null\",\n            \"backgroundImgPath\": \"//static.mettl.xyz/testBackground/null\",\n            \"supportNumbers\": [\n                \"+1 650-924-9221\",\n                \"+91 82878 03040\"\n            ]\n        },\n        \"registrationFields\": [\n            {\n                \"name\": \"\u0908\u092e\u0947\u0932 \u092a\u0924\u093e\",\n                \"type\": \"TextBox\",\n                \"required\": true,\n                \"validate\": false\n            },\n            {\n                \"name\": \"\u092a\u0939\u0932\u093e \u0928\u093e\u092e\",\n                \"type\": \"TextBox\",\n                \"required\": true,\n                \"validate\": false\n            },\n            {\n                \"name\": \"\u0909\u092a\u0928\u093e\u092e\",\n                \"type\": \"TextBox\",\n                \"required\": false,\n                \"validate\": false\n            },\n            {\n                \"name\": \"\u091c\u0928\u094d\u092e\u0924\u093f\u0925\u093f\",\n                \"type\": \"Calendar\",\n                \"required\": true,\n                \"validate\": false\n            },\n            {\n                \"name\": \"\u0938\u0902\u092a\u0930\u094d\u0915 \u0938\u0902\u0916\u094d\u092f\u093e\",\n                \"type\": \"TextBox\",\n                \"required\": false,\n                \"validate\": false\n            },\n            {\n                \"name\": \"\u0932\u093f\u0902\u0917\",\n                \"type\": \"TextBox\",\n                \"required\": false,\n                \"validate\": false\n            },\n            {\n                \"name\": \"\u0926\u0947\u0936\",\n                \"type\": \"TextBox\",\n                \"required\": false,\n                \"validate\": false\n            }\n        ]\n    }\n}"
+            }
+          ]
         }
       ]
     }
