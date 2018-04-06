@@ -3779,6 +3779,80 @@
             }
           },
           "response": []
+        },
+        {
+          "_postman_id": "818b4dc9-e017-4618-a703-ed66b79a0877",
+          "name": "https://490809e5-d8fb-46ef-b68b-b65bc2802f34.mock.pstmn.io/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=hindi",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "db3308ae-559e-4553-a92a-496907ee27b2",
+                "type": "text/javascript",
+                "exec": [
+                  "var ak=environment.ak;",
+                  "var pk=environment.pk;",
+                  "var lc=\"hindi\";",
+                  "var url=environment.url+\"/account\";",
+                  "var method=\"GET\";",
+                  "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
+                  "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "95fd1744-1105-4adb-be7a-e27c4c2e6371",
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyHindi\"]=jsonData.status===\"SUCCESS\""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://490809e5-d8fb-46ef-b68b-b65bc2802f34.mock.pstmn.io/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}&languageCode=hindi",
+              "protocol": "https",
+              "host": [
+                "490809e5-d8fb-46ef-b68b-b65bc2802f34",
+                "mock",
+                "pstmn",
+                "io"
+              ],
+              "path": [
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{ak}}",
+                  "equals": true
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true
+                },
+                {
+                  "key": "ts",
+                  "value": "{{$timestamp}}",
+                  "equals": true
+                },
+                {
+                  "key": "languageCode",
+                  "value": "hindi",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
         }
       ]
     }
