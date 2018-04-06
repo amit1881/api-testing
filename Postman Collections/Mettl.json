@@ -617,7 +617,7 @@
         },
         {
           "_postman_id": "f71eb692-d5e7-cf80-cbcc-12246aad23eb",
-          "name": "get account details with english crf",
+          "name": "get account details with english crfs",
           "event": [
             {
               "listen": "prerequest",
