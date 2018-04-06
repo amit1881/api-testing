@@ -503,7 +503,7 @@
       "item": [
         {
           "_postman_id": "3ec23546-4c40-4a96-2993-597ca18e18f3",
-          "name": "get account details with defautl crf",
+          "name": "get account details with defautl crfs",
           "event": [
             {
               "listen": "prerequest",
