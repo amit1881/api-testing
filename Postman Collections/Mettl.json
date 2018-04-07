@@ -622,7 +622,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "354a9c8e-0c06-4449-900b-51cbbd72c2dd",
+                "id": "83c0faa7-c9ce-48f4-bb35-68edb03d858b",
                 "type": "text/javascript",
                 "exec": [
                   "Utils ={",
@@ -681,7 +681,7 @@
                   "                    ",
                   "};",
                   "",
-                  "function createConcatenatedString (requestMethod,url,data) {",
+                  "function createConcatenatedString(requestMethod,url,data) {",
                   "        var str = requestMethod;",
                   "        str += url;",
                   "        //if(isObject(data)) {",
