@@ -622,7 +622,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "a88428f5-67d6-4c95-a509-f8025c3b7153",
+                "id": "2f61af7d-6fb8-4322-9176-4c7283c68b70",
                 "type": "text/javascript",
                 "exec": [
                   "Utils ={",
@@ -650,6 +650,7 @@
                   "                                    //str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;",
                   "                                    //console.log(str);",
                   "                                    str=createConcatenatedString(request_method,request_url,data);",
+                  "                                    console.log(str);",
                   "                                }",
                   "                        ",
                   "                                var hash = CryptoJS.HmacSHA1(str, private_key);",
