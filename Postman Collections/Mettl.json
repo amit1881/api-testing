@@ -4044,6 +4044,7 @@
           "                                console.log(hashInBase64);",
           "                                hashInBase64=hashInBase64.replace(/\\r/g,\"\").replace(/\\n/g,\"\");",
           "                                hashInBase64=CryptoJS.enc.Utf8.parse(hashInBase64);",
+          "                                console.log(hashInBase64);",
           "                                    return hashInBase64;",
           "                                // var hash = CryptoJS.HmacSHA1(str, private_key).toString(CryptoJS.enc.Base64);",
           "                                // return hash;",
