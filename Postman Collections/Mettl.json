@@ -622,7 +622,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "7390594b-e946-4951-8aaa-68c3cd7465c2",
+                "id": "4a3041b7-0de3-472e-91a1-11aec5b89781",
                 "type": "text/javascript",
                 "exec": [
                   "Utils ={",
@@ -685,7 +685,7 @@
                   "        var str = requestMethod;",
                   "        str += url;",
                   "        //if(isObject(data)) {",
-                  "            forEach((Object.keys(data)), function (key) {",
+                  "            Object.keys(data).forEach(function (key) {",
                   "                str += \"\\n\";",
                   "                str += data[key];",
                   "            });",
