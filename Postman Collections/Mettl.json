@@ -716,7 +716,12 @@
           ],
           "request": {
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
             "body": {},
             "url": {
               "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&languageCode=english&ts={{$timestamp}}",
