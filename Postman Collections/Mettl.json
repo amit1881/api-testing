@@ -622,7 +622,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "4a3041b7-0de3-472e-91a1-11aec5b89781",
+                "id": "cd9061b9-9fc1-4d21-b106-a09fd8e44cfa",
                 "type": "text/javascript",
                 "exec": [
                   "Utils ={",
@@ -646,7 +646,7 @@
                   "                                    data.ak=api_key;",
                   "                                    data.rp=request_params;",
                   "                                    data.ts=time_stamp;",
-                  "                                    console.log(JSON.stringify(data));",
+                  "                                    //console.log(JSON.stringify(data));",
                   "                                    //str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;",
                   "                                    //console.log(str);",
                   "                                    str=createConcatenatedString(request_method,request_url,data);",
