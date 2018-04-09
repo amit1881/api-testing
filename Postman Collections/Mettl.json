@@ -1346,6 +1346,94 @@
           },
           "response": []
         }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "ab546315-3f3f-44b0-8b33-12597f5ad744",
+            "type": "text/javascript",
+            "exec": [
+              "Utils ={",
+              "    generateTimeStamp: function(){",
+              "                        //console.log(new Date());",
+              "                        //console.log((new Date()).getTime());",
+              "                        //console.log((new Date()).getTime()/1000);",
+              "                        //var ts = Math.round((new Date()).getTime() / 1000);",
+              "                        var ts = parseInt(new Date().getTime()/1000);",
+              "                        return ts;",
+              "                    },",
+              "                    ",
+              "    generateSignature: function(request_method,request_url,request_params,api_key,private_key,time_stamp){",
+              "                                var str;",
+              "                                var data={};",
+              "                                if(request_params===null){",
+              "                                    str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+time_stamp;",
+              "                                }",
+              "                                else{",
+              "                                    //data=request_params;",
+              "                                    data.ak=api_key;",
+              "                                    data.rp=request_params;",
+              "                                    data.ts=time_stamp;",
+              "                                    //console.log(JSON.stringify(data));",
+              "                                    //str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;",
+              "                                    //console.log(str);",
+              "                                    str=createConcatenatedString(request_method,request_url,data);",
+              "                                    console.log(str);",
+              "                                }",
+              "                        ",
+              "                                var hash = CryptoJS.HmacSHA1(str, private_key);",
+              "                                //console.log(hash);",
+              "                                //var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+              "                                var hashInBase64 = hash.toString(CryptoJS.enc.Base64);",
+              "                                //console.log(hashInBase64);",
+              "                                //hashInBase64=hashInBase64.replace(/\\r/g,\"\").replace(/\\n/g,\"\");",
+              "                                //hashInBase64=hashInBase64.toString(CryptoJS.enc.Utf8);",
+              "                                //console.log(hashInBase64);",
+              "                                    return hashInBase64;",
+              "                                // var hash = CryptoJS.HmacSHA1(str, private_key).toString(CryptoJS.enc.Base64);",
+              "                                // return hash;",
+              "                                ",
+              "                    }",
+              "                    ",
+              "    // createConcatenatedString:   function(url, data, requestMethod) {",
+              "    //     var str = requestMethod;",
+              "    //     str += url;",
+              "    //     if(angular.isObject(data)) {",
+              "    //         angular.forEach($filter('orderBy')(Object.keys(data)), function (key) {",
+              "    //             str += \"\\n\";",
+              "    //             str += data[key]",
+              "    //         });",
+              "    //     }",
+              "    //     return str;",
+              "    // }                ",
+              "                    ",
+              "};",
+              "",
+              "function createConcatenatedString(requestMethod,url,data) {",
+              "        var str = requestMethod;",
+              "        str += url;",
+              "        //if(isObject(data)) {",
+              "            Object.keys(data).forEach(function (key) {",
+              "                str += \"\\n\";",
+              "                str += data[key];",
+              "            });",
+              "        //}",
+              "        return str;",
+              "    }"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "d43515dc-f1e7-4003-8784-740d346802c3",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
       ]
     },
     {
