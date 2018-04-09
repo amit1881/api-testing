@@ -1280,7 +1280,7 @@
         },
         {
           "_postman_id": "04b3ac74-2a5f-5d7b-ec56-ad3fd4575ed3",
-          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=random",
+          "name": "get account details with random crfs",
           "event": [
             {
               "listen": "prerequest",
