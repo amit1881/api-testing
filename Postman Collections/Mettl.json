@@ -1074,7 +1074,7 @@
         },
         {
           "_postman_id": "e0877a03-5b2c-8eb7-bd1a-ce894e44bff1",
-          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=spanish",
+          "name": "get account details with spanish crfs",
           "event": [
             {
               "listen": "prerequest",
