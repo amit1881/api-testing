@@ -1212,7 +1212,7 @@
         },
         {
           "_postman_id": "ed399e16-5ac6-fca7-88cf-1ac98397b058",
-          "name": "http://api.mettl.info/v1/account?ak={{apikey}}&asgn={{signature}}&ts={{timestamp}}&languageCode=german",
+          "name": "get account details with german crfs",
           "event": [
             {
               "listen": "prerequest",
