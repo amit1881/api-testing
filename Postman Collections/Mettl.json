@@ -616,6 +616,120 @@
           "response": []
         },
         {
+          "_postman_id": "b43c75f1-3cd7-4dfb-a047-b7cc99879002",
+          "name": "get account details with defautl crfs Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "6485c598-e050-4817-835f-c3af6d5bf35e",
+                "type": "text/javascript",
+                "exec": [
+                  "// Utils ={",
+                  "//     generateTimeStamp: function(){",
+                  "//                         console.log(new Date());",
+                  "//                         console.log((new Date()).getTime());",
+                  "//                         console.log((new Date()).getTime()/1000);",
+                  "//                         var ts = Math.round((new Date()).getTime() / 1000);",
+                  "//                         return ts;",
+                  "//                     },",
+                  "                    ",
+                  "//     generateSignature: function(request_method,request_url,request_params,api_key,private_key,time_stamp){",
+                  "//                                 var str;",
+                  "//                                 var strBytes;",
+                  "//                                 var pkBytes=Utils.stringToBytes(private_key);",
+                  "//                                 if(request_params===null){",
+                  "//                                     str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+time_stamp;",
+                  "//                                     strBytes=Utils.stringToBytes(str);",
+                  "//                                 }",
+                  "//                                 else{",
+                  "//                                     str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;",
+                  "//                                     strBytes=Utils.stringToBytes(str);",
+                  "//                                 }",
+                  "                        ",
+                  "//                                 var hash = CryptoJS.HmacSHA1(strBytes.toString(CryptoJS.enc.Utf8), pkBytes.toString(CryptoJS.enc.Utf8));",
+                  "//                                 console.log(hash);",
+                  "//                                 var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
+                  "//                                 console.log(hashInBase64);",
+                  "//                                     return hashInBase64;",
+                  "//                     },",
+                  "//     stringToBytes:      function (str) {",
+                  "//                                 var ch, st, re = [];",
+                  "//                                 for (var i = 0; i < str.length; i++ ) {",
+                  "//                                   ch = str.charCodeAt(i);  // get char ",
+                  "//                                   st = [];                 // set up \"stack\"",
+                  "//                           do {",
+                  "//                               st.push( ch & 0xFF );  // push byte to stack",
+                  "//                               ch = ch >> 8;          // shift value down by 1 byte",
+                  "//                              }  ",
+                  "//                           while ( ch );",
+                  "//                               // add stack contents to result",
+                  "//                               // done because chars have \"wrong\" endianness",
+                  "//                               re = re.concat( st.reverse() );",
+                  "//                         }",
+                  "//                                 // return an array of bytes",
+                  "//                         return re;",
+                  "//                     }    ",
+                  "                    ",
+                  "//     };",
+                  "var ak=environment.ak;",
+                  "var pk=environment.pk;",
+                  "var url=environment.url+\"/account\";",
+                  "var method=\"GET\";",
+                  "var params=null;",
+                  "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
+                  "postman.setGlobalVariable(\"signature\", signature);"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "3940ba25-96c0-4ea0-8762-3cc238a95941",
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "tests.verifyResponseOfGetAccountApiWithoutLanguageKey=jsonData.status===\"SUCCESS\";",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "account"
+              ],
+              "query": [
+                {
+                  "key": "ak",
+                  "value": "{{ak}}",
+                  "equals": true
+                },
+                {
+                  "key": "asgn",
+                  "value": "{{signature}}",
+                  "equals": true
+                },
+                {
+                  "key": "ts",
+                  "value": "{{$timestamp}}",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "_postman_id": "f71eb692-d5e7-cf80-cbcc-12246aad23eb",
           "name": "get account details with english crfs",
           "event": [
@@ -1339,120 +1453,6 @@
                 {
                   "key": "languageCode",
                   "value": "random",
-                  "equals": true
-                }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "b43c75f1-3cd7-4dfb-a047-b7cc99879002",
-          "name": "get account details with defautl crfs Copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "6485c598-e050-4817-835f-c3af6d5bf35e",
-                "type": "text/javascript",
-                "exec": [
-                  "// Utils ={",
-                  "//     generateTimeStamp: function(){",
-                  "//                         console.log(new Date());",
-                  "//                         console.log((new Date()).getTime());",
-                  "//                         console.log((new Date()).getTime()/1000);",
-                  "//                         var ts = Math.round((new Date()).getTime() / 1000);",
-                  "//                         return ts;",
-                  "//                     },",
-                  "                    ",
-                  "//     generateSignature: function(request_method,request_url,request_params,api_key,private_key,time_stamp){",
-                  "//                                 var str;",
-                  "//                                 var strBytes;",
-                  "//                                 var pkBytes=Utils.stringToBytes(private_key);",
-                  "//                                 if(request_params===null){",
-                  "//                                     str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+time_stamp;",
-                  "//                                     strBytes=Utils.stringToBytes(str);",
-                  "//                                 }",
-                  "//                                 else{",
-                  "//                                     str=request_method+request_url+\"\\n\"+api_key+\"\\n\"+request_params+\"\\n\"+time_stamp;",
-                  "//                                     strBytes=Utils.stringToBytes(str);",
-                  "//                                 }",
-                  "                        ",
-                  "//                                 var hash = CryptoJS.HmacSHA1(strBytes.toString(CryptoJS.enc.Utf8), pkBytes.toString(CryptoJS.enc.Utf8));",
-                  "//                                 console.log(hash);",
-                  "//                                 var hashInBase64 = CryptoJS.enc.Base64.stringify(hash);",
-                  "//                                 console.log(hashInBase64);",
-                  "//                                     return hashInBase64;",
-                  "//                     },",
-                  "//     stringToBytes:      function (str) {",
-                  "//                                 var ch, st, re = [];",
-                  "//                                 for (var i = 0; i < str.length; i++ ) {",
-                  "//                                   ch = str.charCodeAt(i);  // get char ",
-                  "//                                   st = [];                 // set up \"stack\"",
-                  "//                           do {",
-                  "//                               st.push( ch & 0xFF );  // push byte to stack",
-                  "//                               ch = ch >> 8;          // shift value down by 1 byte",
-                  "//                              }  ",
-                  "//                           while ( ch );",
-                  "//                               // add stack contents to result",
-                  "//                               // done because chars have \"wrong\" endianness",
-                  "//                               re = re.concat( st.reverse() );",
-                  "//                         }",
-                  "//                                 // return an array of bytes",
-                  "//                         return re;",
-                  "//                     }    ",
-                  "                    ",
-                  "//     };",
-                  "var ak=environment.ak;",
-                  "var pk=environment.pk;",
-                  "var url=environment.url+\"/account\";",
-                  "var method=\"GET\";",
-                  "var params=null;",
-                  "var signature=Utils.generateSignature(method,url,params,ak,pk,Utils.generateTimeStamp());",
-                  "postman.setGlobalVariable(\"signature\", signature);"
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "3940ba25-96c0-4ea0-8762-3cc238a95941",
-                "type": "text/javascript",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "tests.verifyResponseOfGetAccountApiWithoutLanguageKey=jsonData.status===\"SUCCESS\";",
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [],
-            "body": {},
-            "url": {
-              "raw": "{{url}}/account?ak={{ak}}&asgn={{signature}}&ts={{$timestamp}}",
-              "host": [
-                "{{url}}"
-              ],
-              "path": [
-                "account"
-              ],
-              "query": [
-                {
-                  "key": "ak",
-                  "value": "{{ak}}",
-                  "equals": true
-                },
-                {
-                  "key": "asgn",
-                  "value": "{{signature}}",
-                  "equals": true
-                },
-                {
-                  "key": "ts",
-                  "value": "{{$timestamp}}",
                   "equals": true
                 }
               ]
