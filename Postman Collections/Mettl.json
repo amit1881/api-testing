@@ -850,7 +850,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "8e11af54-1360-463f-9c62-91ee08495857",
+                "id": "1937a9ff-2e11-4db9-8290-3dd74d1e2788",
                 "type": "text/javascript",
                 "exec": [
                   "var ak=environment.ak;",
@@ -859,7 +859,25 @@
                   "var url=environment.url+\"/account\";",
                   "var method=\"GET\";",
                   "var signature=Utils.generateSignature(method,url,lc,ak,pk,Utils.generateTimeStamp());",
-                  "postman.setGlobalVariable(\"signature\", signature);"
+                  "postman.setGlobalVariable(\"signature\", signature);",
+                  "",
+                  "",
+                  "",
+                  "// pm.globals.unset(\"variable_key\");",
+                  "",
+                  "// pm.environment.unset(\"variable_key\");",
+                  "",
+                  "// pm.globals.get(\"variable_key\");",
+                  "",
+                  "// pm.variables.get(\"variable_key\");",
+                  "",
+                  "// pm.environment.get(\"variable_key\");",
+                  "",
+                  "pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {",
+                  "    console.log(response.json());",
+                  "});",
+                  "",
+                  "// pm.globals.set(\"variable_key\", \"variable_value\");"
                 ]
               }
             },
