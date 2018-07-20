@@ -866,11 +866,12 @@
             {
               "listen": "test",
               "script": {
-                "id": "55d915fb-8c75-4466-a673-cb6ed9a83ae5",
+                "id": "9edc1376-d0ca-4c90-b860-f7ed5e194fdd",
                 "type": "text/javascript",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyHindi\"]=jsonData.status===\"SUCCESS\""
+                  "tests[\"verifyResponseOfGetAccountApiWithLanguageKeyHindi\"]=jsonData.status===\"SUCCESS\"",
+                  "tests.verifyResponseOfGetAccountApiWithLanguageKeyHindi=jsonData.status===\"SUCCESS\";"
                 ]
               }
             }
