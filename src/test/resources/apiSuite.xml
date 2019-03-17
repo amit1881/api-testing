@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="apiSuite">
+	<test name="AccountApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.account.AccountsApiTest" />
+		</classes>
+	</test>
+
+	<test name="RequestAuthenticationTests">
+		<classes>
+			<class name="com.mettl.test.apis.account.RequestAuthenticationTests" />
+		</classes>
+	</test>
+
+	<test name="AllAssessmentsTests">
+		<classes>
+			<class name="com.mettl.test.apis.assessment.AllAssessmentsTests" />
+		</classes>
+	</test>
+
+	<test name="AssessmentApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.assessment.AssessmentApiTest" />
+		</classes>
+	</test>
+
+<!-- 	<test name="AssessmentByIDTests"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.mettl.test.apis.assessment.AssessmentByIDTests" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+	<test name="GetScheduleByAccessKeyTest">
+		<classes>
+			<class name="com.mettl.test.apis.assessment.GetScheduleByAccessKeyTest" />
+		</classes>
+	</test>
+
+	<test name="CandidateResume">
+		<classes>
+			<class name="com.mettl.test.apis.candidates.CandidateResume" />
+		</classes>
+	</test>
+
+	<test name="EditScheduleApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.assessment.EditScheduleApiTest" />
+		</classes>
+	</test>
+
+	<test name="CreateScheduleApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.assessment.CreateScheduleApiTest" />
+		</classes>
+	</test>
+	
+	<test name="GetScheduleApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.assessment.GetScheduleApiTest" />
+		</classes>
+	</test>
+	
+	<test name="GetSchedulesUsingFiltersApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.assessment.GetSchedulesUsingFiltersApiTest" />
+		</classes>
+	</test>
+
+	<test name="CandidateApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.candidates.CandidateApiTest" />
+		</classes>
+	</test>
+	
+	<test name="GetDetailsForACandidateApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.candidates.GetDetailsForACandidateApiTest" />
+		</classes>
+	</test>
+
+	<test name="RegisterCandidateApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.candidates.RegisterCandidateApiTest" />
+		</classes>
+	</test>
+
+	<test name="RegisterCandidateTests">
+		<classes>
+			<class name="com.mettl.test.apis.candidates.RegisterCandidateTests" />
+		</classes>
+	</test>
+
+	<test name="AllPBTTests">
+		<classes>
+			<class name="com.mettl.test.apis.pbt.AllPBTTests" />
+		</classes>
+	</test>
+
+    <test name="PerformanceCategoryTest">
+		<classes>
+			<class name="com.mettl.test.apis.assessment.PerformanceCategoryTest" />
+		</classes>
+	</test>
+
+	<test name="AssessmentSettingEditApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.assessment.AssessmentSettingEditApiTest" />
+		</classes>
+	</test>
+	
+	<test name="RegisterCandidateApiBiometricApp">
+		<classes>
+			<class name="com.mettl.test.apis.biometric.RegisterCandidateApiBiometricApp" />
+		</classes>
+	</test>
+	
+	<test name="CreateAssessmentApiTest">
+		<classes>
+			<class name="com.mettl.test.apis.CreateAssessment.CreateAssessmentApiTest" />
+		</classes>
+	</test>
+	
+	<test name="CandidateReportDelete">
+	<classes>
+	    <class name="com.mettl.test.apis.candidatereportdelete.CandidateReportDeleteTest" />
+	</classes>
+	</test>
+	
+	<test name="GetAllResultsForAScheduleTests">
+		<classes>
+			<class name="com.mettl.test.apis.WiproZydusResult.GetAllResultsForAScheduleTests" />
+		</classes>
+	</test>
+
+</suite>
