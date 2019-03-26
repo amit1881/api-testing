@@ -9,6 +9,7 @@
           <include name="verifyLocationName"/>
           <include name="beforeClass"/>
           <include name="init"/>
+          <include name="getData"/>
         </methods>
       </class> <!-- org.api.weather.test.apis.WeatherApiTest -->
     </classes>
