@@ -13,7 +13,7 @@ import java.util.Set;
  */
 public enum ApiContext {
 
-	SINGLETON;
+	INSTANCE;
 
 	Map<String, Object> cache = new LinkedHashMap<String, Object>();
 

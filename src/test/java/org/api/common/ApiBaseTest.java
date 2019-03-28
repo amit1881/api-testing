@@ -24,11 +24,11 @@ public abstract class ApiBaseTest {
 	public void initializeSuite() throws IOException {
 		Properties mainConfigProperties = new Properties();
 		mainConfigProperties.load(this.getClass().getClassLoader().getResourceAsStream("config/MainConfig.properties"));
-		ApiContext.SINGLETON.loadFromProperties(mainConfigProperties);
+		ApiContext.INSTANCE.loadFromProperties(mainConfigProperties);
 
 		Reporter.log("Test Suite Initialized with the following properties", true);
 		Reporter.log("****************************************************", true);
-		String key = "* " + "testEnvironment" + " -> " + ApiContext.SINGLETON.getEntryAsString("testEnvironment");
+		String key = "* " + "testEnvironment" + " -> " + ApiContext.INSTANCE.getEntryAsString("testEnvironment");
 		Reporter.log(key, true);
 		Reporter.log("****************************************************", true);
 	}

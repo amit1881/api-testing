@@ -9,7 +9,7 @@ public class BaseApi {
     protected static ApiTestHelper helper = new ApiTestHelper();
 
 	protected static String openWeatherApiUrl() {
-		apiUrl = ApiContext.SINGLETON.getEntryAsString("OPEN_WEATHER_API_URL");
+		apiUrl = ApiContext.INSTANCE.getEntryAsString("OPEN_WEATHER_API_URL");
 		if (apiUrl == null) {
 			throw new RuntimeException("API URL is incorrect. Please check MainConfig.properties");
 		} else {
