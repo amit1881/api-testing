@@ -1,0 +1,47 @@
+[2019-03-27 12:02:34,060] --  
+[2019-03-27 12:02:34,061] -- ====================================verifyLocationName=======================================
+[2019-03-27 12:02:34,061] --  
+[2019-03-27 12:02:34,375] -- Get connection for route {}->http://api.openweathermap.org
+[2019-03-27 12:02:34,395] -- Connecting to api.openweathermap.org:80
+[2019-03-27 12:02:34,517] -- CookieSpec selected: best-match
+[2019-03-27 12:02:34,528] -- Auth cache not set in the context
+[2019-03-27 12:02:34,528] -- Target auth state: UNCHALLENGED
+[2019-03-27 12:02:34,528] -- Proxy auth state: UNCHALLENGED
+[2019-03-27 12:02:34,528] -- Attempt 1 to execute request
+[2019-03-27 12:02:34,528] -- Sending request: GET /data/2.5/weather?APPID=136369dade6fb148b4ede885afb25547&q=London HTTP/1.1
+[2019-03-27 12:02:34,529] --  >> "GET /data/2.5/weather?APPID=136369dade6fb148b4ede885afb25547&q=London HTTP/1.1[\r][\n]"
+[2019-03-27 12:02:34,530] --  >> "Host: api.openweathermap.org[\r][\n]"
+[2019-03-27 12:02:34,530] --  >> "Connection: Keep-Alive[\r][\n]"
+[2019-03-27 12:02:34,530] --  >> "User-Agent: Apache-HttpClient/4.3.3 (java 1.5)[\r][\n]"
+[2019-03-27 12:02:34,530] --  >> "[\r][\n]"
+[2019-03-27 12:02:34,530] -- >> GET /data/2.5/weather?APPID=136369dade6fb148b4ede885afb25547&q=London HTTP/1.1
+[2019-03-27 12:02:34,530] -- >> Host: api.openweathermap.org
+[2019-03-27 12:02:34,530] -- >> Connection: Keep-Alive
+[2019-03-27 12:02:34,530] -- >> User-Agent: Apache-HttpClient/4.3.3 (java 1.5)
+[2019-03-27 12:02:34,617] --  << "HTTP/1.1 200 OK[\r][\n]"
+[2019-03-27 12:02:34,619] --  << "Server: openresty[\r][\n]"
+[2019-03-27 12:02:34,619] --  << "Date: Wed, 27 Mar 2019 06:32:34 GMT[\r][\n]"
+[2019-03-27 12:02:34,619] --  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+[2019-03-27 12:02:34,619] --  << "Content-Length: 451[\r][\n]"
+[2019-03-27 12:02:34,620] --  << "Connection: keep-alive[\r][\n]"
+[2019-03-27 12:02:34,620] --  << "X-Cache-Key: /data/2.5/weather?APPID=136369dade6fb148b4ede885afb25547&q=london[\r][\n]"
+[2019-03-27 12:02:34,620] --  << "Access-Control-Allow-Origin: *[\r][\n]"
+[2019-03-27 12:02:34,620] --  << "Access-Control-Allow-Credentials: true[\r][\n]"
+[2019-03-27 12:02:34,620] --  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
+[2019-03-27 12:02:34,620] --  << "[\r][\n]"
+[2019-03-27 12:02:34,621] -- Receiving response: HTTP/1.1 200 OK
+[2019-03-27 12:02:34,621] -- << HTTP/1.1 200 OK
+[2019-03-27 12:02:34,621] -- << Server: openresty
+[2019-03-27 12:02:34,622] -- << Date: Wed, 27 Mar 2019 06:32:34 GMT
+[2019-03-27 12:02:34,622] -- << Content-Type: application/json; charset=utf-8
+[2019-03-27 12:02:34,622] -- << Content-Length: 451
+[2019-03-27 12:02:34,622] -- << Connection: keep-alive
+[2019-03-27 12:02:34,622] -- << X-Cache-Key: /data/2.5/weather?APPID=136369dade6fb148b4ede885afb25547&q=london
+[2019-03-27 12:02:34,622] -- << Access-Control-Allow-Origin: *
+[2019-03-27 12:02:34,622] -- << Access-Control-Allow-Credentials: true
+[2019-03-27 12:02:34,622] -- << Access-Control-Allow-Methods: GET, POST
+[2019-03-27 12:02:34,628] -- Connection can be kept alive indefinitely
+[2019-03-27 12:02:34,645] --  << "{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"base":"stations","main":{"temp":278.5,"pressure":1034,"humidity":75,"temp_min":276.48,"temp_max":280.15},"visibility":10000,"wind":{"speed":1.5,"deg":260},"clouds":{"all":40},"dt":1553667937,"sys":{"type":1,"id":1417,"message":0.0114,"country":"GB","sunrise":1553665682,"sunset":1553711027},"id":2643743,"name":"London","cod":200}"
+[2019-03-27 12:02:34,646] -- Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7920ba90
+[2019-03-27 12:02:34,646] -- Connection can be kept alive indefinitely
+[2019-03-27 12:02:34,759] -- Connection 0.0.0.0:63314<->178.128.122.9:80 closed
