@@ -26,6 +26,7 @@ import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import io.restassured.RestAssured;
 
 /**
  * @author amit
@@ -37,7 +38,7 @@ public class ApiTestHelper {
 		String jsonResponse = null;
 		HttpResponse httpResponse = null;
 
-		String queryString = this._createQueryString(requestMap);
+		String queryString = this.createQueryString(requestMap);
 		URI uri = URI.create(apiUrl + "?" + queryString);
 
 		HttpGet httpGet = null;
@@ -69,12 +70,17 @@ public class ApiTestHelper {
 		}
 		return jsonResponse;
 	}
+	
+	public String sendGetRequest1(String apiUrl, Map<String, String> requestMap){
+		URI uri = URI.create(apiUrl + "?" + createQueryString(requestMap));
+		return RestAssured.get(uri).getBody().asString();
+	}
 
 	private HttpClient _makeHttpClientInstance() {
 		return new DefaultHttpClient();
 	}
 
-	private String _createQueryString(Map<String, String> requestMap) {
+	private String createQueryString(Map<String, String> requestMap) {
 		List<String> requestParams = new ArrayList<String>();
 		for (Entry<String, String> param : requestMap.entrySet()) {
 			requestParams.add(param.getKey() + "=" + param.getValue());

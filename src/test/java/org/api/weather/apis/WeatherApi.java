@@ -14,7 +14,7 @@ public class WeatherApi extends BaseApi{
         params.put("q", locationParam);
         String Url = openWeatherApiUrl() + "/data/2.5/weather";
         try {
-            response = helper.sendGetRequest(Url, params);
+            response = helper.sendGetRequest1(Url, params);
         } catch (Exception e) {
             e.printStackTrace();
         }
