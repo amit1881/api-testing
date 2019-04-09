@@ -24,4 +24,18 @@ public class WeatherApiTest extends ApiBaseTest {
 		assertEquals(read(response, "$.name"), "London");
 	}
 
+	@Test
+	public void verifyTest2(){
+		assertEquals("tst2","test2");
+	}
+	
+	@Test
+	public void verifyTest3(){
+		assertEquals("tst3","test3");
+	}
+	
+	@Test
+	public void verifyTest4(){
+		assertEquals("tst4","test4");
+	}
 }
